@@ -1,0 +1,42 @@
+---
+--- 
+
+<section class="relative w-full rounded-xl overflow-hidden shadow-lg">
+  <video
+    id="contact-video"
+    class="w-full h-[40vh] md:h-[50vh] object-cover"
+    loop
+    muted
+    playsinline
+    preload="metadata"
+  >
+    <source src="/videos/anvlppF.mp4" type="video/mp4" />
+    Din webbläsare stöder inte video-taggen.
+  </video>
+</section>
+
+<script is:client>
+  // Wait for the DOM to be fully loaded
+  window.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('contact-video');
+    if (!video) return;
+
+    // Ensure it's muted for autoplay
+    video.muted = true;
+
+    // Try to play immediately
+    video.play().catch(() => {
+      // If autoplay is blocked, play when visible
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.25 }
+      );
+      observer.observe(video);
+    });
+  });
+</script>

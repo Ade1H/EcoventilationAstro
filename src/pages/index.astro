@@ -1,11 +1,173 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// React components (hydrated islands)
+import HeroVideoSection from "../components/HeroVideoSection.astro";
+import HeroCarousel from "../components/HeroCarousel.astro";
+import ContactVideo from "../components/ContactVideo.astro";
+
+const features = [
+  {
+    title: "Erfarenhet",
+    description:
+      "Flera års erfarenhet av ventilationsservice i hela Sverige, inklusive Gävle, Stockholm, Göteborg och Malmö.",
+  },
+  {
+    title: "Certifierade experter",
+    description:
+      "Vi utför rensning av imkanaler, FTX-service och avloppsrensning med högsta kvalitet.",
+  },
+  {
+    title: "Prisvärt",
+    description:
+      "Konkurrenskraftiga priser för ventilationsservice och regelbundet underhåll.",
+  },
+  {
+    title: "Snabb service",
+    description:
+      "Akuta uppdrag som rensning av imkanaler och FTX-service hanteras effektivt.",
+  },
+];
+
+const services = [
+  {
+    title: "Rensning Imkanal",
+    description:
+      "Vi rengör imkanaler i bostäder och företag i hela Sverige. Regelbunden rensning förebygger fett, smuts och dålig lukt.",
+    image: "/images/ImKanalOrginal.webp",
+    link: "/rensning-imkanal",
+    alt: "Rensning av imkanal i hela Sverige av certifierad ventilationsspecialist",
+  },
+  {
+    title: "FTX / Värmeväxlare",
+    description:
+      "FTX-service för bättre inomhusklimat. Vi rengör och underhåller FTX-system i hela Sverige för optimal luftcirkulation.",
+    image: "/images/FTX.webp",
+    link: "/ftx-varmevaxlare",
+    alt: "FTX-service och värmeväxlare i Sverige",
+  },
+  {
+    title: "Avloppsrensning & Spolning",
+    description:
+      "Professionell avloppsrensning och spolning för att undvika stopp, översvämningar och dålig lukt.",
+    image: "/images/vloop.webp",
+    link: "/avloppsrensning-spolning",
+    alt: "Avloppsrensning och spolning i Sverige",
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout
+  title="Ventilationsservice & Imkanalsrensning i Sverige | Ecoventilation"
+  description="Ecoventilation erbjuder professionell ventilationsservice, rensning av imkanaler, FTX-service och avloppsrensning i hela Sverige."
+  url="https://www.ecoventilation.se"
+>
+  <main class="overflow-x-hidden">
+
+    <!-- HERO VIDEO -->
+    <HeroVideoSection />
+
+    <!-- FEATURES -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <header class="text-center mb-12">
+          <h1 class="text-4xl font-bold mb-4">
+            Professionell Ventilationsservice i Sverige – Imkanal, FTX & Avloppsrensning
+          </h1>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Ecoventilation erbjuder rensning av imkanaler, FTX-service och avloppsrensning
+            i hela Sverige. Certifierade experter för bättre inomhusluft.
+          </p>
+        </header>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((f, idx) => (
+            <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
+              <div class="w-16 h-16 bg-gradient-to-tr from-gray-800 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-white font-bold text-xl">{idx + 1}</span>
+              </div>
+              <h2 class="text-xl font-semibold mb-2">{f.title}</h2>
+              <p class="text-gray-500">{f.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- JS only when visible -->
+        <HeroCarousel />
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <header class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Våra Ventilationstjänster i Sverige</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Vi erbjuder rensning av imkanaler, FTX-service och avloppsrensning i hela
+            Sverige för både bostäder och företag.
+          </p>
+        </header>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((s) => (
+            <article class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+              <img
+                src={s.image}
+                alt={s.alt}
+                width="400"
+                height="300"
+                loading="lazy"
+                class="rounded-lg mb-4"
+              />
+
+              <h3 class="text-xl font-semibold mb-2">{s.title}</h3>
+              <p class="text-gray-500 mb-4">{s.description}</p>
+
+              <div class="flex gap-2 flex-wrap justify-center">
+             <a href={s.link}>
+  {s.title} i Sverige
+</a>
+
+                <a
+                  href="/contact"
+                  class="px-4 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition"
+                  aria-label={`Boka ${s.title} hos Ecoventilation`}
+                >
+                  Boka {s.title} →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <ContactVideo />
+
+    <!-- CTA -->
+    <section class="py-16 bg-white text-center">
+      <h2 class="text-3xl font-bold mb-4">Boka ventilationsservice idag</h2>
+      <p class="text-gray-600 max-w-xl mx-auto mb-6">
+        Vi hjälper dig med rensning av imkanaler, FTX-service och avloppsrensning
+        i hela Sverige. Kontakta Ecoventilation för snabb och trygg service.
+      </p>
+
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a
+          href="/contact"
+          class="px-6 py-3 rounded-full bg-black text-white hover:bg-gray-800 transition"
+        >
+          Kontakta Ecoventilation
+        </a>
+
+        <a
+          href="tel:+4620104544"
+          class="px-7 py-3 rounded-full border border-black hover:bg-black hover:text-white transition"
+        >
+          Ring oss direkt
+        </a>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

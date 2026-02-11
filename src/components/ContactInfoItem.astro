@@ -1,0 +1,19 @@
+---
+const { title, value, sub, href } = Astro.props;
+import '../styles/global.css';
+---
+
+<div class="flex items-start">
+  <div class="p-3 rounded-full mr-4">
+    <span class="text-blue-600 text-xl"></span>
+  </div>
+  <div>
+    <h3 class="font-semibold text-gray-800 mb-1">{title}</h3>
+    {href ? (
+      <a href={href} class="text-lg text-gray-700 hover:text-blue-600 transition duration-300">{value}</a>
+    ) : (
+      <p class="text-lg text-gray-700">{value}</p>
+    )}
+    {sub && <p class="text-sm text-gray-500 mt-1">{sub}</p>}
+  </div>
+</div>

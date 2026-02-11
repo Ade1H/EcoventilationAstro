@@ -1,0 +1,94 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import Chat from '../components/Chat.astro';
+
+/* import ChatBot from '../components/ChatBot.jsx'; */
+// Dynamic props
+const {
+  title = "Ecoventilation",
+  description = "Ecoventilation erbjuder professionell ventilationsservice, rensning av imkanaler, FTX-service och avloppsrensning i hela Sverige.",
+  ogImage = "https://www.ecoventilation.se/images/og-image.png"
+} = Astro.props;
+
+// Generate dynamic URL automatically
+const siteUrl = "https://www.ecoventilation.se";
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Basic SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ecoventilation" />
+    <link rel="canonical" href={currentUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Ecoventilation" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Sitemap -->
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href={`${siteUrl}/sitemap-index.xml`}
+    />
+
+    <!-- LocalBusiness Structured Data -->
+    <script type="application/ld+json" is:inline>
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "Ecoventilation",
+        url: siteUrl,
+        logo: `${siteUrl}/favicon.png`,
+        image: ogImage,
+        description: description,
+        areaServed: {
+          "@type": "Country",
+          name: "Sweden"
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "SE"
+        },
+        sameAs: [
+          "https://www.facebook.com/profile.php?id=61586090752435",
+          "https://www.instagram.com/ecoventilation/"
+        ]
+      })}
+    </script>
+    <!-- <ChatBot client:only="react" /> -->
+  </head>
+
+  <body class="min-h-screen flex flex-col">
+    <Navbar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Chat />
+    <Footer />
+  </body>
+</html>

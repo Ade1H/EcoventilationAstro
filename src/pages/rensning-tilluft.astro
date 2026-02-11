@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+      {`
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hur ofta bör tilluftssystemet rengöras?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Professionell rengöring rekommenderas minst vartannat år, och årligen för hushåll med allergiker eller småbarn."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad ingår i rengöringen av tilluft?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inspektion, rengöring av ventiler och kanaler, filtrering och eventuell desinfektion samt optimering av luftflöde."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Varför är rengöring viktigt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ett rent tilluftssystem förbättrar luftkvaliteten, minskar allergirisken, ökar komforten och energieffektiviteten i hemmet."
+            }
+          }
+        ]
+      }
+      `}
+    </script>
+
+    <!-- Page Title -->
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Tilluft</h1>
+      <p class="text-gray-600 text-lg md:text-xl">
+        Tilluft är den luft som tillförs bostaden för att ersätta förbrukad inomhusluft. Ett välfungerande tilluftssystem bidrar till ett behagligt inomhusklimat, minskar risken för instängd eller förorenad luft och är avgörande för din familjs hälsa och välbefinnande.
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/TillLuft.webp" alt="Rensning av Tilluft - bild 1" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/tilluft.webp" alt="Rensning av Tilluft - bild 2" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="max-w-4xl mx-auto text-gray-700 mb-12">
+      <p>Tilluftsventilation har en avgörande roll i att skapa ett hälsosamt inomhusklimat. Systemet ansvarar för att kontinuerligt tillföra frisk, filtrerad utomhusluft till bostaden, särskilt i rum där vi vistas under längre perioder.</p>
+      <p>Genom noggrant utformade tilluftsventiler skapas en balanserad luftfördelning som inte bara förbättrar komforten, utan också optimerar luftkvaliteten och minimerar risken för fuktproblem och allergener.</p>
+      <p>Moderna bostäder är allt tätare, vilket gör effektiv tilluftsventilation viktigare än någonsin för att undvika instängd luft och de hälsoproblem som kan följa med dålig ventilation.</p>
+    </div>
+
+    <!-- Components -->
+    <div class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Tilluftsventiler – rengörs och kontrolleras</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Kanaler – dammsugs och desinficeras vid behov</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Filter – byts eller rengörs för optimal luftkvalitet</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Fläktar och luftfördelare – säkerställer jämnt luftflöde</div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Renare och friskare inomhusluft</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Minskad risk för allergier och irritation</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Bättre luftflöde och komfort i alla rum</div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">Energieffektivisering genom optimerad ventilation</div>
+    </div>
+
+    <!-- Warning Signs -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tecken på att service behövs</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-600">
+        <li>Instängd eller unken luft i rummen</li>
+        <li>Ökad mängd damm på möbler och golv</li>
+        <li>Kondens på insidan av fönster</li>
+        <li>Allergier som förvärras inomhus</li>
+        <li>Torr luft eller irriterade luftvägar</li>
+      </ul>
+    </div>
+
+    <!-- Process -->
+    <div class="max-w-6xl mx-auto mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Så går rengöringen till</h2>
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">1</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Inspektion av hela tilluftssystemet</h4>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">2</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Rengöring av ventiler och kanaler</h4>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">3</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Filtrering och eventuell desinfektion</h4>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">4</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Justering och optimering av luftflöde</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Rekommendationer</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-600">
+        <li>Professionell rengöring rekommenderas minst vartannat år</li>
+        <li>I hushåll med allergiker eller småbarn kan årlig rengöring vara nödvändig</li>
+        <li>Byt filter regelbundet för bästa resultat</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
+      <h3 class="text-2xl font-semibold mb-2">Förbättra inomhusluften i ditt hem</h3>
+      <p class="mb-4">Boka professionell rengöring av ditt tilluftssystem och säkerställ frisk luft året runt</p>
+      <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
+        Kontakta oss
+      </a>
+    </div>
+
+  </main>
+</BaseLayout>

@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Map from '../components/Map.jsx';
+
+
+---
+
+<BaseLayout>
+  <main class="about-page max-w-[1400px] mx-auto px-6 py-8 font-sans text-[#2C3E50] leading-relaxed">
+    
+    <!-- Hero sektion med bild -->
+    <div class="relative w-full h-[60vh] min-h-[400px] max-h-[600px] rounded-2xl overflow-hidden mb-12">
+      <img 
+        src="/images/ventbild3.webp" 
+        alt="Ecoventilation team eller ventilationsinstallation" 
+        class="object-cover w-full h-full" 
+      />
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
+        <div class="max-w-3xl">
+          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Ecoventilation – Ventilationsspecialister
+          </h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-6">
+            Din partner för hållbar ventilation sedan 2018
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <span class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white">
+              Certifierade experter
+            </span>
+            <span class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white">
+              Hållbara lösningar
+            </span>
+            <span class="bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-white">
+              10+ års erfarenhet
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Introduktion -->
+    <section class="section mb-12">
+      <h2 class="text-3xl font-bold text-[#34495E] mb-6">Välkommen till Ecoventilation</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <p class="text-lg text-[#4A6572] mb-4">
+            Vi är ett Gävlebaserat företag som sedan 2018 specialiserat oss på professionella ventilationslösningar 
+            för både privat- och företagskunder. Vår passion är att skapa hälsosamma och energieffektiva inomhusmiljöer.
+          </p>
+          <p class="text-lg text-[#4A6572]">
+            Med ett starkt fokus på kvalitet och kundnöjdhet har vi byggt upp ett rykte som pålitliga experter inom 
+            ventilation och klimatanläggningar.
+          </p>
+        </div>
+        <div class="bg-gray-100 rounded-xl p-6 border border-gray-200">
+          <h3 class="text-xl font-bold text-[#2C3E50] mb-4">Vårt uppdrag</h3>
+          <p class="text-[#4A6572]">
+            Att leverera innovativa och hållbara ventilationslösningar som förbättrar inomhusklimatet samtidigt som 
+            vi minskar energiförbrukningen och miljöpåverkan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Våra värderingar -->
+    <section class="values-section mt-16 text-center py-12 bg-[#F8F9FA] rounded-2xl">
+      <h2 class="text-3xl font-bold text-[#2C3E50] mb-10">Våra värderingar</h2>
+      <div class="values-grid grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto px-4">
+        {[
+          { title: "Kvalitet & Expertis", text: "Vi använder endast certifierade produkter och våra montörer har mångårig erfarenhet. Varje installation genomförs med precision och omsorg.", color: "text-blue-600" },
+          { title: "Hållbarhet", text: "Vi prioriterar energisnåla lösningar med hög återvinningsgrad. Våra system minskar energiförbrukningen med upp till 80% jämfört med traditionell ventilation.", color: "text-green-600" },
+          { title: "Personlig Service", text: "Varje kund är unik. Vi tar oss tid att lyssna på dina behov och skräddarsyr lösningen efter just din situation och budget.", color: "text-purple-600" },
+        ].map((v, i) => (
+          <div key={i} class="value-card bg-white p-6 rounded-xl shadow-lg border border-[#ECF0F1] hover:transform hover:scale-[1.02] transition-transform duration-300">
+            <div class={v.color + " text-4xl mb-4"}></div>
+            <h3 class="text-xl font-semibold text-[#2C3E50] mb-3">{v.title}</h3>
+            <p class="text-[#7F8C8D] leading-normal">{v.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Vår plats -->
+    <section class="map-section mt-12 mb-16">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold text-[#34495E] mb-4">Besök oss</h2>
+        <p class="text-lg text-[#4A6572] max-w-2xl mx-auto">
+          Välkommen till vårt kontor på Petregatan 1 för en kostnadsfri konsultation och rundvandring i vårt showroom.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <!-- Kontaktinformation -->
+        <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+          <h3 class="text-2xl font-bold text-[#2C3E50] mb-6 pb-3 border-b border-gray-300">Kontaktinformation</h3>
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-gray-700 mb-1">Adress</h4>
+              <p class="text-gray-600 text-lg">Petregatan 1, 802 50 Gävle</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-700 mb-1">Telefon</h4>
+              <p class="text-gray-600 text-lg"> 020-10 45 44</p>
+              <p class="text-sm text-gray-500 mt-1">Mån-Fre 08:00-17:00</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-700 mb-1">E-post</h4>
+              <p class="text-gray-600 text-lg">info@ecoventilation.se</p>
+              <p class="text-sm text-gray-500 mt-1">Svarar inom 24 timmar</p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-700 mb-1">Öppettider</h4>
+              <div class="text-gray-600">
+                <p class="mb-1">Måndag - Fredag: 08:00-17:00</p>
+                <p class="mb-1">Lördag: 10:00-14:00</p>
+                <p>Söndag: Stängt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Karta -->
+        
+          
+          
+        
+          <section class="rounded-xl overflow-hidden shadow-lg  border-gray-300">
+  <h2 class="text-3xl font-bold mb-6">Hitta oss</h2>
+
+  <!-- Render the map ONLY on the client -->
+  <Map client:only="react" lat={60.674} lng={17.141} markerText="Ecoventilation - Gävle" />
+</section>
+      
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta text-center py-10 px-6 bg-[#2C3E50] text-white rounded-2xl mb-8">
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">Redo för en förändring?</h3>
+      <p class="text-lg mb-6 max-w-2xl mx-auto">
+        Kontakta oss idag för en kostnadsfri konsultation och offert på ditt ventilationsbehov.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
+          Boka kostnadsfri konsultation
+        </a>
+        <a href="tel:026123456" class="btn-secondary inline-block bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition duration-300">
+          Ring 026-123 456
+        </a>
+      </div>
+    </section>
+
+    <!-- Ytterligare information -->
+    <section class="section mt-12">
+      <h2 class="text-2xl font-bold text-[#34495E] mb-6">Vi erbjuder</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Bostadsventilation</h3>
+          <p class="text-gray-600">Från villor till flerbostadshus</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Industriventilation</h3>
+          <p class="text-gray-600">Anpassade lösningar för företag</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-800 mb-2">Underhåll & Service</h3>
+          <p class="text-gray-600">Årlig service för optimal drift</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+ 
+</BaseLayout>

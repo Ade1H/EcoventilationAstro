@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+      {`
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hur ofta behöver FTX-systemet servas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Filter bör rengöras eller bytas var 3–6 månad, årlig kontroll rekommenderas, och djupservice vart 3–5 år."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Varför är FTX-service viktig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "För att säkerställa god luftkvalitet, energieffektivitet och förhindra fukt eller mögel."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kan jag boka service akut?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, kontakta oss via vårt formulär eller telefon för snabb assistans."
+            }
+          }
+        ]
+      }
+      `}
+    </script>
+
+    <!-- Page Title -->
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">FTX / Värmeväxlare</h1>
+      <p class="text-gray-600 text-lg md:text-xl">
+        FTX-system styr både till- och frånluften och återvinner värmen från den varma inneluften. Regelbundet underhåll säkerställer optimal funktion.
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/FTX.webp" alt="FTX / Värmeväxlare - Bild 1" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/ftxPic.webp" alt="FTX / Värmeväxlare - Bild 2" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+    </div>
+
+    <!-- Description -->
+    <div class="max-w-4xl mx-auto space-y-6 text-gray-700 mb-12">
+      <p>FTX-ventilation (Frånluft–Tilluft med värmeåtervinning) är energieffektivt och säkerställer god ventilation samtidigt som värme återvinns.</p>
+      <p>Systemet kan återvinna upp till 90 % av värmen, vilket sänker energikostnader och ger stabilt inomhusklimat.</p>
+      <p>Under sommaren kan systemet även bidra till svalare tilluft genom värmeöverföring.</p>
+    </div>
+
+    <!-- Benefits -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Fördelar med FTX-system</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-600">
+        <li>Energieffektiv värmeåtervinning</li>
+        <li>Förbättrad luftkvalitet med filtrerad tilluft</li>
+        <li>Jämnare inomhustemperatur</li>
+        <li>Minskad energiförbrukning</li>
+        <li>Minskar risken för fukt och mögel</li>
+      </ul>
+    </div>
+
+    <!-- Warning Signs -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">När är det dags för service?</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-600">
+        <li>Försämrad luftkvalitet</li>
+        <li>Ökad energiförbrukning</li>
+        <li>Ovanliga ljud från aggregatet</li>
+        <li>Ojämn temperatur i byggnaden</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
+      <h3 class="text-2xl font-semibold mb-2">Service och underhåll av FTX</h3>
+      <p class="mb-4">Säkerställ god ventilation och maximal energieffektivitet.</p>
+      <a
+        href="/contact"
+        class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
+      >
+        Kontakta oss
+      </a>
+    </div>
+
+  </main>
+</BaseLayout>

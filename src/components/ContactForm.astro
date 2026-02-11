@@ -1,0 +1,129 @@
+---
+// ContactForm.astro
+---
+<div class="bg-white p-8 rounded-xl shadow-lg border border-[#ECF0F1]">
+  <h2 class="text-2xl font-bold text-[#2C3E50] mb-6 pb-3 border-b border-gray-300">
+    Skicka meddelande
+  </h2>
+
+  <form id="contact-form" class="space-y-5">
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Namn *</label>
+      <input
+        type="text"
+        name="name"
+        required
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        placeholder="För- och efternamn"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">E-post *</label>
+      <input
+        type="email"
+        name="email"
+        required
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        placeholder="namn@foretag.se"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Telefon</label>
+      <input
+        type="tel"
+        name="phone"
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        placeholder="070 123 45 67"
+      />
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Tjänst *</label>
+      <select
+        name="service"
+        required
+        class="w-full px-4 py-3 border rounded-lg bg-white focus:ring-2 focus:ring-teal-500 focus:outline-none"
+      >
+        <option value="">Välj tjänst</option>
+        <option>Rensning imkanal</option>
+        <option>Rensning frånluft</option>
+        <option>Rensning tilluft</option>
+        <option>Rensning luft-luft</option>
+        <option>FTX / värmeväxlare</option>
+        <option>Avloppsrensning / spolning</option>
+        <option>Annat</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-gray-700 font-medium mb-1">Meddelande *</label>
+      <textarea
+        name="message"
+        rows="5"
+        required
+        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        placeholder="Beskriv ditt behov, adress, önskat datum..."
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      id="contact-submit"
+      class="w-full py-4 bg-[#2C3E50] text-white font-bold rounded-lg hover:bg-[#1f2f3a] transition disabled:opacity-50 flex justify-center items-center gap-2"
+    >
+      <span id="contact-btn-text">Skicka meddelande</span>
+      <svg id="contact-spinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+    </button>
+  </form>
+
+  <p id="contact-status" class="mt-4 text-center font-medium hidden"></p>
+</div>
+
+<!-- Lägg EmailJS CDN med defer i BaseLayout eller här -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js" defer></script>
+
+<script is:inline>
+  window.addEventListener("load", () => {
+    // Init EmailJS efter att skriptet är laddat
+    emailjs.init("NLBsjYL9Mzh6V2D0i");
+
+    const form = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("contact-submit");
+    const btnText = document.getElementById("contact-btn-text");
+    const spinner = document.getElementById("contact-spinner");
+    const statusMsg = document.getElementById("contact-status");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      submitBtn.disabled = true;
+      btnText.textContent = "Skickar...";
+      spinner.classList.remove("hidden");
+      statusMsg.classList.add("hidden");
+
+      emailjs.sendForm("service_8rrj0gk", "template_l6prp7b", form)
+        .then(() => {
+          statusMsg.textContent = "✅ Tack! Vi återkommer inom 24 timmar.";
+          statusMsg.classList.remove("hidden");
+          statusMsg.classList.add("text-green-800");
+          form.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          statusMsg.textContent = "❌ Något gick fel. Försök igen senare.";
+          statusMsg.classList.remove("hidden");
+          statusMsg.classList.add("text-red-800");
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          btnText.textContent = "Skicka meddelande";
+          spinner.classList.add("hidden");
+        });
+    });
+  });
+</script>

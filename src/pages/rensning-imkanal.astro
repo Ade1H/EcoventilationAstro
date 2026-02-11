@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+      {`
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Hur ofta bör imkanalen rengöras?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Vi rekommenderar rengöring minst en gång per år. Hushåll med mycket matlagning kan behöva tätare underhåll."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Varför är rengöring av imkanal viktigt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Smutsiga imkanaler ökar brandrisken och försämrar luftflödet, vilket påverkar ventilationen och inomhusluften."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Vad ingår i rensningen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inspektion, mekanisk och kemisk rengöring, kontroll av luftflöde och dokumentation."
+            }
+          }
+        ]
+      }
+      `}
+    </script>
+
+    <!-- Page Title -->
+    <div class="max-w-3xl mx-auto text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Imkanal</h1>
+      <p class="text-gray-600 text-lg md:text-xl">
+        Imkanalen leder bort matos, ånga och fett från spisfläkten. När fett samlas försämras luftflödet och brandrisken ökar.
+      </p>
+    </div>
+
+    <!-- Images -->
+    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/imkanalTowPer.webp" alt="Rensning av imkanal - bild 1" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-md">
+        <img src="/images/imK2.webp" alt="Rensning av imkanal - bild 2" class="w-full h-64 md:h-80 object-cover" />
+      </div>
+    </div>
+
+    <!-- Key Facts -->
+    <div class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-12">
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <h4 class="font-semibold text-gray-800 mb-2">Brandrisk</h4>
+        <p class="text-gray-600">Smutsiga imkanaler är en vanlig orsak till köksbränder</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <h4 class="font-semibold text-gray-800 mb-2">Ventilation</h4>
+        <p class="text-gray-600">Rengöring kan förbättra luftflödet avsevärt</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <h4 class="font-semibold text-gray-800 mb-2">Rekommendation</h4>
+        <p class="text-gray-600">Minst en gång per år för hushåll</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md text-center">
+        <h4 class="font-semibold text-gray-800 mb-2">Säkerhet</h4>
+        <p class="text-gray-600">Rekommenderas av brandmyndigheter</p>
+      </div>
+    </div>
+
+    <!-- Warning Signs -->
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Vanliga tecken på igensatt imkanal</h2>
+      <ul class="list-disc list-inside space-y-2 text-gray-600">
+        <li>Matos stannar kvar i köket</li>
+        <li>Dålig sugkraft</li>
+        <li>Fettrester vid ventiler</li>
+        <li>Ovanlig lukt från fläkten</li>
+      </ul>
+    </div>
+
+    <!-- Process -->
+    <div class="max-w-6xl mx-auto mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Vår arbetsprocess</h2>
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">1</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Inspektion</h4>
+          <p class="text-gray-600">Kontroll av kanalens skick och beläggning</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">2</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Rengöring</h4>
+          <p class="text-gray-600">Mekanisk och kemisk rengöring</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">3</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Kontroll</h4>
+          <p class="text-gray-600">Säkerställ fritt luftflöde</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-md text-center">
+          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">4</div>
+          <h4 class="font-semibold text-gray-800 mb-2">Dokumentation</h4>
+          <p class="text-gray-600">Efterkontroll och rapport</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
+      <h3 class="text-2xl font-semibold mb-2">Boka rensning av imkanal</h3>
+      <p class="mb-4">För ett säkrare kök och bättre ventilation.</p>
+      <a
+        href="/contact"
+        class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
+      >
+        Kontakta oss
+      </a>
+    </div>
+
+  </main>
+</BaseLayout>
