@@ -1,4 +1,4 @@
-/* // test-models.js
+// test-models.js
 const apiKey = "AIzaSyA7kVGZ5rH4ubtv9uMvtdsHcF_B5rTBKaI";
 
 const modelsToTest = [
@@ -161,4 +161,4 @@ async function testAllModels() {
 }
 
 // KÖR TESTET!
-testAllModels().catch(console.error); */
+testAllModels().catch(console.error);

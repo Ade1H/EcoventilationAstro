@@ -1,0 +1,75 @@
+// src/pages/api/chat.ts
+export const POST = async ({ request }) => {
+  // Logga ALLT
+  console.log('========== API ANROPAT ==========');
+  console.log('1. Request method:', request.method);
+  console.log('2. Request headers:', Object.fromEntries(request.headers));
+  
+  try {
+    // Läs request body som text (det säkraste sättet)
+    const bodyText = await request.text();
+    console.log('3. Rå body text:', bodyText);
+    
+    // Om body är tom
+    if (!bodyText || bodyText.trim() === '') {
+      console.log('4. BODY ÄR TOM!');
+      return new Response(
+        JSON.stringify({ error: 'Ingen data skickades' }),
+        { 
+          status: 400,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+    
+    // Försök parsa JSON
+    let data;
+    try {
+      data = JSON.parse(bodyText);
+      console.log('4. Parssad JSON:', data);
+    } catch (e) {
+      console.log('4. JSON-parsing misslyckades:', e.message);
+      return new Response(
+        JSON.stringify({ error: 'Ogiltig JSON: ' + e.message }),
+        { 
+          status: 400,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
+    }
+    
+    // Hämta meddelandet
+    const userMessage = data.message || data.text || 'Inget meddelande';
+    console.log('5. Användarens meddelande:', userMessage);
+    
+    // Skapa ett enkelt svar
+    const svar = `Hej! Du frågade: "${userMessage}". Tack för ditt meddelande! En kundtjänstmedarbetare återkommer inom kort.`;
+    
+    console.log('6. Skickar svar:', svar);
+    
+    // Returnera svaret
+    return new Response(
+      JSON.stringify({ 
+        svar: svar,
+        message: svar,
+        text: svar 
+      }),
+      { 
+        status: 200,
+        headers: { 
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    
+  } catch (error) {
+    console.error('❌ Allvarligt fel:', error);
+    return new Response(
+      JSON.stringify({ error: error.message }),
+      { 
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
+  }
+};

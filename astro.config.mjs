@@ -30,16 +30,13 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import netlify from "@astrojs/netlify"; // <-- LÄGG TILL!
+
+
+import node from "@astrojs/node";
+
 
 export default defineConfig({
   site: "https://www.ecoventilation.se",
-  
-  // ===========================================
-  // ✅ ÄNDRA TILL SERVER MED NETLIFY ADAPTER!
-  // ===========================================
-  output: "server",
-  adapter: netlify(),
 
   integrations: [
     react(),
@@ -52,4 +49,17 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+
+  adapter: node({
+    mode: "standalone",
+  }),
 });
+
+/* 
+import { defineConfig } from 'astro/config';
+import vercel from '@astrojs/vercel/serverless'; // eller netlify, node
+
+export default defineConfig({
+  output: 'server',
+  adapter: vercel(), // eller netlify(), node()
+}); */
