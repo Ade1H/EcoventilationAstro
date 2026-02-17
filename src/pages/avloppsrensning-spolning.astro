@@ -1,102 +1,116 @@
 ---
+// File: src/pages/avlopp.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
+  <head>
+    <title>Avloppsspolning & Avloppsrensning i Sverige – Gävle, Piteå, Östersund</title>
+    <meta name="description" content="Vi erbjuder avloppsspolning och avloppsrensning i hela Sverige. Våra certifierade VVS-tekniker rensar och spolar avlopp snabbt och professionellt." />
+    <meta name="robots" content="index, follow" />
+  </head>
+
   <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
 
-    <!-- FAQ JSON-LD schema -->
-    <script type="application/ld+json">
-      {`
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Hur ofta behöver avloppet rensas?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Det beror på användning, men vanligtvis bör avlopp rensas minst en gång per år för att undvika stopp och dålig lukt."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Vad orsakar stopp i avloppet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vanliga orsaker är fett, hår, tvålrester och andra föremål som fastnar i rören."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Kan ni åtgärda akuta stopp?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, vi erbjuder snabb och professionell avloppsrensning för akuta situationer över hela Sverige."
-            }
-          }
-        ]
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hur ofta behöver avloppet rensas i Gävle, Piteå och Östersund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vi rekommenderar rensning vart 3–4 år för att säkerställa korrekt funktion och undvika framtida stopp och vattenskador."
       }
-      `}
-    </script>
+    },
+    {
+      "@type": "Question",
+      "name": "Vad orsakar stopp i avloppet i Gävle, Piteå och Östersund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vanliga orsaker är fett, hår, tvålrester och andra föremål som fastnar i rören."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan ni åtgärda akuta stopp i dessa städer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, våra legitimerade VVS-tekniker erbjuder snabb och professionell avloppsrensning och spolning i Gävle, Piteå, Östersund och hela Sverige."
+      }
+    }
+  ]
+}
+</script>
 
     <!-- Page Title -->
     <div class="max-w-3xl mx-auto text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        Avloppsrensning & Spolning
+        Avloppsrensning & Avloppsspolning i Sverige
       </h1>
       <p class="text-gray-600 text-lg md:text-xl">
-        Stopp i avloppet kan orsaka lukt och översvämning. Vi åtgärdar problemen snabbt och professionellt över hela Sverige.
+        Vi hjälper dig att rensa och spola avloppet i  hela Sverige för att förebygga stopp, dålig lukt och skador – snabbt och professionellt.
       </p>
     </div>
 
     <!-- Images -->
     <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img 
-          src="/images/AvloppBlumma.webp" 
-          alt="Avloppsrensning utförd av certifierad expert" 
-          class="w-full h-64 md:h-80 object-cover"
-        />
+        <img src="/images/AvloppBlumma.webp" alt="Avloppsrensning utförd av certifierad expert i Gävle, Piteå, Östersund" class="w-full h-64 md:h-80 object-cover" />
       </div>
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img 
-          src="/images/avlopp2.webp" 
-          alt="Spolning av avlopp med professionell utrustning" 
-          class="w-full h-64 md:h-80 object-cover"
-        />
+        <img src="/images/avlopp2.webp" alt="Spolning av avlopp med professionell utrustning i Gävle, Piteå, Östersund" class="w-full h-64 md:h-80 object-cover" />
       </div>
     </div>
 
-    <!-- Description -->
+    <!-- Avloppsrensning -->
     <section class="max-w-4xl mx-auto space-y-6 text-gray-700 mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Avloppsrensning</h2>
       <p>
-        Avloppsrensning innebär att man avlägsnar stopp och beläggningar som samlats i rören över tid. Vanliga orsaker är fett, hår, tvålrester och andra föremål.
+        Avloppsrensning innebär att ta bort blockeringar och främmande föremål från rören. Detta kan göras med en avloppsrensare, rensband eller genom demontering av rören. Stopp uppstår ofta när föremål fastnar i vask, dusch eller golvbrunn, vilket kan leda till översvämning.
       </p>
       <p>
-        När avloppet inte rensas regelbundet kan problemen försvåra och leda till översvämning eller fuktskador.
+        Typiska tecken på att avloppet behöver rensas är långsam avrinning, bubblande ljud eller unken lukt. Tillfälliga lösningar kan vara vaskrensare eller rensband, men en grundlig rensning med rensvajer rekommenderas för att undvika återkommande problem.
       </p>
       <p>
-        Typiska tecken på stopp är långsam avrinning, bubblande ljud och dålig lukt från avloppet.
+        Våra VVS-tekniker är legitimerade och har den yrkesbehörighet som krävs för att utföra arbetet. Vi rekommenderar rensning vart 3–4 år för att säkerställa att systemet fungerar korrekt och undvika framtida stopp och vattenskador. Vi arbetar i hela Sverige.
       </p>
     </section>
 
-    <!-- Tips -->
+    <!-- Avloppsspolning -->
+    <section class="max-w-4xl mx-auto space-y-6 text-gray-700 mb-12">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Avloppsspolning</h2>
+      <p>
+        Avloppsspolning är en metod där rören spolas rena med högt tryck och vatten. Detta kan göras med hjälp av en avloppsspolare eller slang med högt tryck. Förebyggande spolning lönar sig över tid eftersom akuta stopp oftast är dyrare att åtgärda.
+      </p>
+      <p>
+        Genom högtrycksspolning av avlopp, golvbrunnar, toaletter och diskbänkar kan vi effektivt förebygga stopp och obehagliga lukter. Processen säkerställer att rörsystemet fungerar optimalt och är fritt från fett, beläggningar och rost som kan orsaka sprickbildning eller läckage.
+      </p>
+      <p>
+        Regelbunden spolning rekommenderas var femte år och hjälper till att identifiera och åtgärda problem i tid. Observera att kommunen inte ansvarar för spolning av privata avlopp – som fastighetsägare är det ditt ansvar att underhålla systemet. Våra tjänster finns i hela Sverige.
+      </p>
+    </section>
+
+    <!-- Förebyggande tips -->
     <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Förebyggande tips</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Undvik att hälla fett och matrester i avloppet</li>
-        <li>Använd sil i diskho, handfat och dusch</li>
-        <li>Rensa golvbrunnar regelbundet</li>
+        <li>Häll inte ut matfett eller matrester i vasken.</li>
+        <li>Använd sil i diskho, handfat och dusch.</li>
+        <li>Rensa golvbrunnar och filter regelbundet.</li>
+        <li>Undvik frätande kemiska propplösare som kan skada rören.</li>
+        <li>Planera regelbunden avloppsspolning var femte år för bästa funktion.</li>
       </ul>
     </section>
 
-    <!-- Warning Signs -->
+    <!-- Tecken på problem -->
     <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">När behöver avloppet rensas?</h2>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tecken på att avloppet behöver åtgärdas</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Långsam avrinning i handfat eller dusch</li>
+        <li>Långsam avrinning i handfat, dusch eller golvbrunn</li>
         <li>Dålig eller unken lukt</li>
         <li>Återkommande stopp</li>
         <li>Bubblande ljud från rören</li>
@@ -106,11 +120,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <!-- CTA -->
     <section class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
       <h3 class="text-2xl font-semibold mb-2">Behöver du hjälp med avloppet?</h3>
-      <p class="mb-4">Vi hjälper dig snabbt och professionellt.</p>
-      <a
-        href="/contact"
-        class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
-      >
+      <p class="mb-4">Vi erbjuder både avloppsspolning och avloppsrensning snabbt och professionellt.</p>
+      <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
         Kontakta oss
       </a>
     </section>

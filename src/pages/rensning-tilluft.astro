@@ -3,11 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
+  <head>
+    <title>Rensning av Tilluft – Gävle & Sverige</title>
+    <meta name="description" content="Professionell rengöring av tilluftssystem i hela Sverige. Förbättra inomhusluft, komfort och energieffektivitet med regelbunden service." />
+    <meta name="robots" content="index, follow" />
+  </head>
+
   <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
 
     <!-- FAQ JSON-LD -->
-    <script type="application/ld+json">
-      {`
+    <script type="application/ld+json" is:inline>
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -38,32 +43,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           }
         ]
       }
-      `}
     </script>
 
     <!-- Page Title -->
     <div class="max-w-3xl mx-auto text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Tilluft</h1>
       <p class="text-gray-600 text-lg md:text-xl">
-        Tilluft är den luft som tillförs bostaden för att ersätta förbrukad inomhusluft. Ett välfungerande tilluftssystem bidrar till ett behagligt inomhusklimat, minskar risken för instängd eller förorenad luft och är avgörande för din familjs hälsa och välbefinnande.
+        Tilluft tillför frisk utomhusluft till hemmet. Ett välskött system säkerställer hälsosamt inomhusklimat och jämn komfort, oavsett om du bor i Sverige.
       </p>
     </div>
 
     <!-- Images -->
     <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/TillLuft.webp" alt="Rensning av Tilluft - bild 1" class="w-full h-64 md:h-80 object-cover" />
+      <img 
+  src="/images/TillLuft.webp" 
+  alt="Tilluftsventiler i bostad" 
+  class="w-full h-64 md:h-80 object-cover" 
+  width="672" 
+  height="448" 
+  fetchpriority="high" 
+/>
       </div>
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/tilluft.webp" alt="Rensning av Tilluft - bild 2" class="w-full h-64 md:h-80 object-cover" />
+        <img 
+          src="/images/tilluft.webp" 
+          alt="Rensning av Tilluft" 
+          class="w-full h-64 md:h-80 object-cover" 
+          loading="lazy" 
+          width="672" 
+          height="448" 
+        />
       </div>
     </div>
 
     <!-- Description -->
-    <div class="max-w-4xl mx-auto text-gray-700 mb-12">
-      <p>Tilluftsventilation har en avgörande roll i att skapa ett hälsosamt inomhusklimat. Systemet ansvarar för att kontinuerligt tillföra frisk, filtrerad utomhusluft till bostaden, särskilt i rum där vi vistas under längre perioder.</p>
-      <p>Genom noggrant utformade tilluftsventiler skapas en balanserad luftfördelning som inte bara förbättrar komforten, utan också optimerar luftkvaliteten och minimerar risken för fuktproblem och allergener.</p>
-      <p>Moderna bostäder är allt tätare, vilket gör effektiv tilluftsventilation viktigare än någonsin för att undvika instängd luft och de hälsoproblem som kan följa med dålig ventilation.</p>
+    <div class="max-w-4xl mx-auto text-gray-700 mb-12 space-y-4">
+      <p>
+        Tilluftsventilation säkerställer kontinuerlig tillförsel av frisk luft till bostaden. Strategiskt placerade ventiler i sovrum, vardagsrum och andra rum ger ett balanserat och hälsosamt inomhusklimat.
+      </p>
+      <p>
+        Ventilerna bör hållas rena och korrekt inställda för att undvika försämrad luftkvalitet och hälsorisker. Regelbunden kontroll säkerställer att systemet fungerar optimalt.
+      </p>
+      <p>
+        Rengöring och service är viktiga för både luftkvalitet och energieffektivitet. Hur ofta det behövs beror på systemtyp: F-system var tredje år, S-system var fjärde år, FTX-system varierar mellan frånluft var tredje år och tilluft var sjätte år.
+      </p>
+      <p>
+        Luftfilter bör bytas årligen, och oftare i bostäder nära trafikerade vägar eller dammiga områden.
+      </p>
     </div>
 
     <!-- Components -->
@@ -89,7 +116,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <li>Instängd eller unken luft i rummen</li>
         <li>Ökad mängd damm på möbler och golv</li>
         <li>Kondens på insidan av fönster</li>
-        <li>Allergier som förvärras inomhus</li>
+        <li>Förvärrade allergier inomhus</li>
         <li>Torr luft eller irriterade luftvägar</li>
       </ul>
     </div>
@@ -121,20 +148,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Rekommendationer</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Professionell rengöring rekommenderas minst vartannat år</li>
-        <li>I hushåll med allergiker eller småbarn kan årlig rengöring vara nödvändig</li>
-        <li>Byt filter regelbundet för bästa resultat</li>
+        <li>Rengöring minst vartannat år</li>
+        <li>Årlig rengöring vid allergiker eller småbarn</li>
+        <li>Byt luftfilter regelbundet</li>
       </ul>
     </div>
 
     <!-- CTA -->
     <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
-      <h3 class="text-2xl font-semibold mb-2">Förbättra inomhusluften i ditt hem</h3>
-      <p class="mb-4">Boka professionell rengöring av ditt tilluftssystem och säkerställ frisk luft året runt</p>
+      <h3 class="text-2xl font-semibold mb-2">Säkra frisk luft i hemmet</h3>
+      <p class="mb-4">Boka professionell rengöring av ditt tilluftssystem i Sverige</p>
       <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
         Kontakta oss
       </a>
     </div>
+
+    <!-- Social Links med aria-label -->
+    <!-- <div class="flex justify-center gap-4 mt-12">
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
+      <a href="https://tiktok.com/@ecoventilation" target="_blank" aria-label="TikTok" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
+    </div> -->
+
+    <!-- Smartsupp chat -->
+    <script src="https://widget-v3.smartsuppcdn.com/assets/main-AIm7gawg.js" defer></script>
 
   </main>
 </BaseLayout>

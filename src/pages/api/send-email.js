@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export async function post({ request }) {
+export async function POST({ request }) {
   const data = await request.json();
 
   const transporter = nodemailer.createTransport({
@@ -15,7 +15,7 @@ export async function post({ request }) {
   });
 
   const mailOptions = {
-    from: data.email, // avsändarens email (från formuläret)
+    from: process.env.EMAIL_USER, // ✅ must be your email domain
     to: process.env.EMAIL_TO,
     subject: `Kontaktformulär: ${data.service}`,
     text: `
@@ -25,6 +25,7 @@ export async function post({ request }) {
       Tjänst: ${data.service}
       Meddelande: ${data.message}
     `,
+    replyTo: data.email, // ✅ reply goes to the customer
   };
 
   try {

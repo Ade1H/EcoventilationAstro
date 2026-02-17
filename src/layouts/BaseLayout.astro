@@ -1,10 +1,9 @@
 ---
+// src/layouts/BaseLayout.astro
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-/* import Chat from '../components/ChatWidget'; */
 
-/* import ChatBot from '../components/ChatBot.jsx'; */
 // Dynamic props
 const {
   title = "Ecoventilation",
@@ -12,7 +11,6 @@ const {
   ogImage = "https://www.ecoventilation.se/images/og-image.png"
 } = Astro.props;
 
-// Generate dynamic URL automatically
 const siteUrl = "https://www.ecoventilation.se";
 const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
 ---
@@ -22,12 +20,8 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Basic SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ecoventilation" />
     <link rel="canonical" href={currentUrl} />
 
     <!-- Open Graph -->
@@ -49,12 +43,7 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
     <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Sitemap -->
-    <link
-      rel="sitemap"
-      type="application/xml"
-      title="Sitemap"
-      href={`${siteUrl}/sitemap-index.xml`}
-    />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href={`${siteUrl}/sitemap-index.xml`} />
 
     <!-- LocalBusiness Structured Data -->
     <script type="application/ld+json" is:inline>
@@ -66,29 +55,42 @@ const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
         logo: `${siteUrl}/favicon.png`,
         image: ogImage,
         description: description,
-        areaServed: {
-          "@type": "Country",
-          name: "Sweden"
-        },
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "SE"
-        },
+        areaServed: { "@type": "Country", name: "Sweden" },
+        address: { "@type": "PostalAddress", addressCountry: "SE" },
         sameAs: [
           "https://www.facebook.com/profile.php?id=61586090752435",
           "https://www.instagram.com/ecoventilation/"
         ]
       })}
     </script>
-    <!-- <ChatBot client:only="react" /> -->
   </head>
 
   <body class="min-h-screen flex flex-col">
     <Navbar />
     <main class="flex-1">
-      <slot />
+      <slot /> <!-- innehåll från sidor hamnar här -->
     </main>
-   <!--  <Chat /> -->
     <Footer />
+
+<!-- Smartsupp Live Chat -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '3400d6d9802ae7139f71a54d518fba8f6aa5aed0';
+
+  // Asynkron laddning utan att blockera rendering
+  (function(d) {
+    var s = d.getElementsByTagName('script')[0];
+    var c = d.createElement('script');
+    c.type = 'text/javascript';
+    c.async = true;   // Viktigt: gör att chatten inte blockerar sidan
+    c.charset = 'utf-8';
+    c.src = 'https://www.smartsuppchat.com/loader.js';
+    s.parentNode.insertBefore(c, s);
+  })(document);
+</script>
+<noscript>
+  Powered by <a href="https://www.smartsupp.com" target="_blank">Smartsupp</a>
+</noscript>
+
   </body>
 </html>

@@ -1,21 +1,59 @@
 ---
+// File: src/pages/about.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Map from '../components/Map.jsx';
-
-
 ---
 
 <BaseLayout>
+  <head>
+    <title>Ecoventilation – Ventilationsspecialister i Gävle och Sverige</title>
+    <meta name="description" content="Ecoventilation erbjuder professionella ventilationslösningar i Gävle och hela Sverige sedan 2018. Certifierade experter, hållbara lösningar och personlig service." />
+    <meta name="robots" content="index, follow" />
+  </head>
+
   <main class="about-page max-w-[1400px] mx-auto px-6 py-8 font-sans text-[#2C3E50] leading-relaxed">
-    
+
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Var erbjuder Ecoventilation sina ventilationslösningar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ecoventilation erbjuder professionella ventilationslösningar i Gävle och över hela Sverige för både privatpersoner och företag."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vilken erfarenhet har Ecoventilation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sedan 2018 har Ecoventilation levererat hållbara och energieffektiva ventilationslösningar med certifierade experter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vilka tjänster erbjuder Ecoventilation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vi erbjuder bostadsventilation, industriventilation, underhåll och service över hela Sverige, med fokus på hållbara och effektiva lösningar."
+      }
+    }
+  ]
+}
+</script>
+
     <!-- Hero sektion med bild -->
     <div class="relative w-full h-[60vh] min-h-[400px] max-h-[600px] rounded-2xl overflow-hidden mb-12">
       <img 
         src="/images/ventbild3.webp" 
-        alt="Ecoventilation team eller ventilationsinstallation" 
+        alt="Ecoventilation team och ventilationsinstallation i Gävle" 
         class="object-cover w-full h-full" 
       />
-
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex flex-col justify-end p-8 md:p-12">
         <div class="max-w-3xl">
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
@@ -45,12 +83,12 @@ import Map from '../components/Map.jsx';
       <div class="grid md:grid-cols-2 gap-8">
         <div>
           <p class="text-lg text-[#4A6572] mb-4">
-            Vi är ett Gävlebaserat företag som sedan 2018 specialiserat oss på professionella ventilationslösningar 
+            Vi är ett <strong>Gävlebaserat företag</strong> som sedan 2018 specialiserat oss på professionella ventilationslösningar 
             för både privat- och företagskunder. Vår passion är att skapa hälsosamma och energieffektiva inomhusmiljöer.
           </p>
           <p class="text-lg text-[#4A6572]">
             Med ett starkt fokus på kvalitet och kundnöjdhet har vi byggt upp ett rykte som pålitliga experter inom 
-            ventilation och klimatanläggningar.
+            ventilation och klimatanläggningar i Gävle och hela Sverige.
           </p>
         </div>
         <div class="bg-gray-100 rounded-xl p-6 border border-gray-200">
@@ -67,7 +105,7 @@ import Map from '../components/Map.jsx';
     <section class="values-section mt-16 text-center py-12 bg-[#F8F9FA] rounded-2xl">
       <h2 class="text-3xl font-bold text-[#2C3E50] mb-10">Våra värderingar</h2>
       <div class="values-grid grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full mx-auto px-4">
-        {[
+        {[ 
           { title: "Kvalitet & Expertis", text: "Vi använder endast certifierade produkter och våra montörer har mångårig erfarenhet. Varje installation genomförs med precision och omsorg.", color: "text-blue-600" },
           { title: "Hållbarhet", text: "Vi prioriterar energisnåla lösningar med hög återvinningsgrad. Våra system minskar energiförbrukningen med upp till 80% jämfört med traditionell ventilation.", color: "text-green-600" },
           { title: "Personlig Service", text: "Varje kund är unik. Vi tar oss tid att lyssna på dina behov och skräddarsyr lösningen efter just din situation och budget.", color: "text-purple-600" },
@@ -85,9 +123,9 @@ import Map from '../components/Map.jsx';
     <section class="map-section mt-12 mb-16">
       <div class="text-center mb-10">
         <h2 class="text-3xl font-bold text-[#34495E] mb-4">Besök oss</h2>
-        <p class="text-lg text-[#4A6572] max-w-2xl mx-auto">
-          Välkommen till vårt kontor på Petregatan 1 för en kostnadsfri konsultation och rundvandring i vårt showroom.
-        </p>
+       <!--  <p class="text-lg text-[#4A6572] max-w-2xl mx-auto">
+          Välkommen till vårt kontor på Petregatan 1 i Gävle för en kostnadsfri konsultation och rundvandring i vårt showroom.
+        </p> -->
       </div>
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <!-- Kontaktinformation -->
@@ -100,12 +138,12 @@ import Map from '../components/Map.jsx';
             </div>
             <div>
               <h4 class="font-semibold text-gray-700 mb-1">Telefon</h4>
-              <p class="text-gray-600 text-lg"> 020-10 45 44</p>
+              <p class="text-gray-600 text-lg">020-10 45 44</p>
               <p class="text-sm text-gray-500 mt-1">Mån-Fre 08:00-17:00</p>
             </div>
             <div>
               <h4 class="font-semibold text-gray-700 mb-1">E-post</h4>
-              <p class="text-gray-600 text-lg">info@ecoventilation.se</p>
+              <p class="text-gray-600 text-lg">kundservice@ecoventilation.se</p>
               <p class="text-sm text-gray-500 mt-1">Svarar inom 24 timmar</p>
             </div>
             <div>
@@ -120,18 +158,10 @@ import Map from '../components/Map.jsx';
         </div>
 
         <!-- Karta -->
-        
-          
-          
-        
-          <section class="rounded-xl overflow-hidden shadow-lg  border-gray-300">
-  <h2 class="text-3xl font-bold mb-6">Hitta oss</h2>
-
-  <!-- Render the map ONLY on the client -->
-  <Map client:only="react" lat={60.674} lng={17.141} markerText="Ecoventilation - Gävle" />
-</section>
-      
-
+        <section class="rounded-xl overflow-hidden shadow-lg border-gray-300">
+          <h2 class="text-3xl font-bold mb-6">Hitta oss</h2>
+          <Map client:only="react" lat={60.674} lng={17.141} markerText="Ecoventilation - Gävle" />
+        </section>
       </div>
     </section>
 
@@ -139,14 +169,14 @@ import Map from '../components/Map.jsx';
     <section class="about-cta text-center py-10 px-6 bg-[#2C3E50] text-white rounded-2xl mb-8">
       <h3 class="text-2xl md:text-3xl font-bold mb-4">Redo för en förändring?</h3>
       <p class="text-lg mb-6 max-w-2xl mx-auto">
-        Kontakta oss idag för en kostnadsfri konsultation och offert på ditt ventilationsbehov.
+        Kontakta oss idag för en kostnadsfri konsultation och offert på ditt ventilationsbehov i Gävle eller någon annan del av Sverige.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
           Boka kostnadsfri konsultation
         </a>
-        <a href="tel:026123456" class="btn-secondary inline-block bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition duration-300">
-          Ring 026-123 456
+        <a href="tel:020104544" class="btn-secondary inline-block bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition duration-300">
+          Ring 020-10 45 44
         </a>
       </div>
     </section>
@@ -171,5 +201,4 @@ import Map from '../components/Map.jsx';
     </section>
 
   </main>
- 
 </BaseLayout>

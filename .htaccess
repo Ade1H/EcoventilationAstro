@@ -1,0 +1,25 @@
+# Aktivera Expires headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Bilder
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # Video
+  ExpiresByType video/mp4 "access plus 1 year"
+
+  # CSS och JS
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+</IfModule>
+
+# Lägg till Cache-Control headers
+<IfModule mod_headers.c>
+  <FilesMatch "\.(mp4|webp|png|jpg|jpeg|css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>

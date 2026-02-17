@@ -3,11 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout>
+  <head>
+    <title>Rensning av Luft-Luft Värmepump – Sverige</title>
+    <meta name="description" content="Ecoventilation erbjuder professionell rengöring av luft-luftvärmepumpar i Sverige. Regelbunden service förbättrar luftkvalitet, energieffektivitet och värmepumpens livslängd." />
+    <meta name="robots" content="index, follow" />
+  </head>
+
   <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
 
     <!-- FAQ JSON-LD -->
-    <script type="application/ld+json">
-      {`
+    <script type="application/ld+json" is:inline>
       {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -17,7 +22,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             "name": "Hur ofta bör luft-luftvärmepumpen rengöras?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Vi rekommenderar rengöring minst 1 gång per år, vid hög användning kan service behövas var 6:e månad."
+              "text": "Vi rekommenderar rengöring minst en gång per år. Vid intensiv användning kan service behövas var sjätte månad, i Sverige."
             }
           },
           {
@@ -25,7 +30,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             "name": "Varför behövs professionell rengöring?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Smutsiga filter och värmeväxlare minskar effektiviteten, ökar energikostnader och försämrar inomhusluften."
+              "text": "Smutsiga filter och värmeväxlare minskar effektiviteten, höjer energikostnader och försämrar inomhusluften."
             }
           },
           {
@@ -38,32 +43,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           }
         ]
       }
-      `}
     </script>
 
     <!-- Page Title -->
     <div class="max-w-3xl mx-auto text-center mb-12">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Luft-Luft Värmepump</h1>
       <p class="text-gray-600 text-lg md:text-xl">
-        För att din luft-luftvärmepump ska fungera effektivt, ge ren luft och hålla låg energiförbrukning krävs regelbunden professionell rengöring.
+        För att din luft-luftvärmepump ska ge maximal effekt, ren luft och låg energiförbrukning krävs regelbunden professionell rengöring – vi erbjuder service i Sverige.
       </p>
     </div>
 
     <!-- Images -->
     <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/ACmodern.webp" alt="Rensning av Luft-Luft Värmepump - bild 1" class="w-full h-64 md:h-80 object-cover" />
+        <img src="/images/ACmodern.webp" alt="Luft-Luft Värmepump rengöring - Gävle" class="w-full h-64 md:h-80 object-cover" />
       </div>
       <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/AC.webp" alt="Rensning av Luft-Luft Värmepump - bild 2" class="w-full h-64 md:h-80 object-cover" />
+        <img src="/images/AC.webp" alt="Luft-Luft Värmepump rengöring - Sverige" class="w-full h-64 md:h-80 object-cover" />
       </div>
     </div>
 
     <!-- Description -->
-    <div class="max-w-4xl mx-auto text-gray-700 mb-12">
-      <p>Luft-luftvärmepumpar är en av de mest energieffektiva uppvärmningslösningarna och kan ge flera gånger mer värme än den el som förbrukas.</p>
-      <p>När filter och värmeväxlare blir smutsiga minskar effektiviteten kraftigt, vilket leder till högre elkostnader och sämre inomhusluft.</p>
-      <p>Professionell rengöring säkerställer optimal prestanda, längre livslängd och bättre komfort året runt.</p>
+    <div class="max-w-4xl mx-auto text-gray-700 mb-12 space-y-4">
+      <p>
+        En luft-luftvärmepump består oftast av två delar: en inomhusenhet och en utomhusenhet. Den tar värme från utomhusluften och överför den inomhus, vilket ger effektiv uppvärmning och lägre energikostnader.
+      </p>
+      <p>
+        Smutsiga filter och värmeväxlare får pumpen att arbeta hårdare, vilket minskar effektiviteten, ökar elförbrukningen och försämrar luftkvaliteten inomhus.
+      </p>
+      <p>
+        Regelbunden professionell rengöring säkerställer optimal funktion, längre livslängd och bättre komfort året runt. Smuts och damm tas bort innan det påverkar inomhusluften eller skadar pumpen.
+      </p>
     </div>
 
     <!-- Components -->
@@ -72,19 +82,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <ul class="list-disc list-inside space-y-2 text-gray-600">
         <li>Inomhusenhet – filter, fläkt och värmeväxlare</li>
         <li>Utomhusenhet – kondensor och fläkt</li>
-        <li>Dräneringssystem – förebygger läckage och mögel</li>
-        <li>Elektronik och sensorer – stabil och säker drift</li>
+        <li>Dräneringssystem – förhindrar vattenläckage och mögel</li>
+        <li>Elektronik och sensorer – säkerställer stabil drift</li>
       </ul>
     </div>
 
     <!-- Benefits -->
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Fördelar med rengöring</h2>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Fördelar med regelbunden rengöring</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Lägre energiförbrukning</li>
-        <li>Renare och friskare inomhusluft</li>
+        <li>Lägre energikostnader</li>
+        <li>Bättre och renare inomhusluft</li>
         <li>Tystare drift</li>
-        <li>Längre livslängd på värmepumpen</li>
+        <li>Längre livslängd för värmepumpen</li>
       </ul>
     </div>
 
@@ -93,10 +103,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tecken på att service behövs</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
         <li>Minskat värme- eller kylflöde</li>
-        <li>Ovanliga lukter från enheten</li>
+        <li>Ovanliga lukter från inomhusenheten</li>
         <li>Högre ljudnivå än normalt</li>
-        <li>Vattenläckage eller kondens</li>
-        <li>Ökad elförbrukning</li>
+        <li>Vattenläckage eller kondensproblem</li>
+        <li>Ökad elförbrukning utan anledning</li>
       </ul>
     </div>
 
@@ -110,7 +120,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="bg-white p-6 rounded-xl shadow-md text-center">
           <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">2</div>
-          <p class="text-gray-600">Noggrann filter- och fläktrengöring</p>
+          <p class="text-gray-600">Rengöring av filter och fläkt</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow-md text-center">
           <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">3</div>
@@ -131,16 +141,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
       <h2 class="text-2xl font-semibold text-gray-800 mb-4">Rekommendationer</h2>
       <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Rengöring rekommenderas minst 1 gång per år</li>
-        <li>Vid hög användning kan service behövas var 6:e månad</li>
-        <li>Regelbunden service ger jämnare värme och bättre ekonomi</li>
+        <li>Service minst 1 gång per år</li>
+        <li>Vid hög användning kan rengöring behövas var sjätte månad</li>
+        <li>Regelbunden service säkerställer jämnare temperatur och lägre energikostnader</li>
       </ul>
     </div>
 
     <!-- CTA -->
     <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
-      <h3 class="text-2xl font-semibold mb-2">Maximera prestandan på din värmepump</h3>
-      <p class="mb-4">Boka professionell rengöring och sänk dina energikostnader</p>
+      <h3 class="text-2xl font-semibold mb-2">Håll din värmepump i toppskick</h3>
+      <p class="mb-4">Boka professionell rengöring för bättre luft och lägre energikostnader i Sverige</p>
       <a
         href="/contact"
         class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
