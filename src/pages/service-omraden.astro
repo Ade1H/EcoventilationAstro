@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import cities from "../data/swedish-cities.json";
+---
+
+<BaseLayout
+  title=" Ventilation och avloppsservice i Hela Sverige | Ventilationsservice"
+  description="Ventilationsservice i alla städer i Sverige. Rensning av ventilationskanaler, FTX service, luftflödesmätning och injustering."
+>
+
+<main class="max-w-6xl mx-auto px-6 py-20">
+
+<!-- HERO -->
+<section class="text-center mb-16">
+  <h1 class="text-4xl font-bold">
+    Ventilationsservice i Hela Sverige
+  </h1>
+
+  <p class="mt-4 text-lg text-gray-600">
+    Vi erbjuder <strong>ventilation</strong>,
+    <strong>avloppsrensning</strong>,
+    <strong>kanalrensning</strong>,
+    <strong>imkanal rengöring</strong>,
+    <strong>FTX service</strong> och
+    <strong>luftflödesmätning</strong>
+    i alla städer och kommuner i Sverige.
+  </p>
+</section>
+
+<!-- CITY GRID -->
+<section class="grid md:grid-cols-3 gap-6">
+
+{cities.map(city => (
+  <a
+    href={`/ventilation/${city.slug}`}
+    class="border p-6 rounded-lg hover:bg-black hover:text-white transition"
+  >
+    <h2 class="text-xl font-semibold">
+      Ventilation {city.name}
+    </h2>
+
+    <p class="text-sm mt-2">
+      Klicka för att läsa mer om ventilationsservice,
+      kanalrensning och FTX service i {city.name}.
+    </p>
+  </a>
+))}
+
+</section>
+
+</main>
+</BaseLayout>

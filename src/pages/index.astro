@@ -84,7 +84,7 @@ const services = [
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((f, idx) => (
             <div class="bg-white p-6 rounded-xl shadow-md text-center hover:shadow-lg transition">
-              <div class="w-16 h-16 bg-gradient-to-tr from-gray-800 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-4">
+             <div class="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
                 <span class="text-white font-bold text-xl">{idx + 1}</span>
               </div>
               <h2 class="text-xl font-semibold mb-2">{f.title}</h2>
@@ -99,49 +99,53 @@ const services = [
     </section>
 
     <!-- SERVICES -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-4">
-        <header class="text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Våra Ventilationstjänster i Sverige</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            Vi erbjuder rensning av imkanaler, FTX-service och avloppsrensning i hela
-            Sverige för både bostäder och företag.
-          </p>
-        </header>
+    <!-- ================= SERVICES ================= -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
 
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <article class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
-              <img
-                src={s.image}
-                alt={s.alt}
-                width="400"
-                height="300"
-                loading="lazy"
-                class="rounded-lg mb-4"
-              />
+    <header class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Våra Tjänster</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Specialister på ventilation och avlopp – med fokus på kvalitet och säkerhet.
+      </p>
+    </header>
 
-              <h3 class="text-xl font-semibold mb-2">{s.title}</h3>
-              <p class="text-gray-500 mb-4">{s.description}</p>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {services.map((s) => (
+        <article class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition flex flex-col text-center">
 
-              <div class="flex gap-2 flex-wrap justify-center">
-             <a href={s.link}>
-  {s.title} i Sverige
-</a>
+          <img
+            src={s.image}
+            alt={s.alt}
+            loading="lazy"
+            class="rounded-lg mb-4 object-cover h-56 w-full"
+          />
 
-                <a
-                  href="/contact"
-                  class="px-4 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition"
-                  aria-label={`Boka ${s.title} hos Ecoventilation`}
-                >
-                  Boka {s.title} →
-                </a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
+          <h3 class="text-xl font-semibold mb-2">{s.title}</h3>
+          <p class="text-gray-600 text-sm mb-4">{s.description}</p>
+
+          <div class="flex flex-col gap-3 mt-auto">
+            <a
+              href={s.link}
+              class="underline text-black hover:text-[#3498DB] text-sm"
+            >
+              Läs mer om {s.title}
+            </a>
+
+            <a
+              href="/contact"
+              class="px-4 py-2 rounded-full bg-black text-white hover:bg-gray-800 transition text-sm"
+            >
+              Boka {s.title}
+            </a>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
 
     <ContactVideo />
 

@@ -3,166 +3,123 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactForm from '../components/ContactForm.astro';
 ---
 
-<BaseLayout>
-  <main class="contact-page max-w-[1400px] mx-auto px-6 py-12 font-sans text-[#2C3E50] leading-relaxed">
+<BaseLayout
+  title="Kontakta Oss | Ecoventilation"
+  description="Kontakta Ecoventilation för professionell ventilationsservice, rensning och FTX-underhåll i Sverige."
+>
 
-    <!-- FAQ JSON-LD -->
-    <script type="application/ld+json">
-      {`
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Hur snabbt svarar ni på kontaktförfrågningar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vi svarar vanligtvis inom 24 timmar via e-post eller telefon."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Kan jag boka akut ventilationsservice?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ja, vi har jourtelefon för akuta ärenden alla dagar 08:00-22:00."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Var ligger ert kontor?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vårt kontor finns på Petregatan 1, 802 50 Gävle. Gratis parkering finns bakom byggnaden."
-            }
-          }
-        ]
-      }
-      `}
-    </script>
+<main class="max-w-[1200px] mx-auto px-6 py-16 font-sans text-gray-800">
 
-    <!-- Hero Image -->
-    <div class="relative w-full h-[35vh] min-h-[250px] rounded-xl overflow-hidden mb-12">
-      <img
-        src="/images/ContactPic.webp"
-        alt="Kontakta Ecoventilation - ventilationsspecialister"
-        class="w-full h-full object-cover"
-      />
-      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-        <div class="text-center text-white p-4">
-          <h1 class="text-3xl md:text-4xl font-bold mb-2">Kontakta oss</h1>
-          <p class="text-lg">Vi är här för att hjälpa dig med ventilation & rensning</p>
-        </div>
-      </div>
-    </div>
+  <!-- ================= HERO ================= -->
+  <section class="mb-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+      Kontakta Oss
+    </h1>
 
-    <!-- Intro -->
-    <section class="text-center mb-12">
-      <p class="text-lg md:text-xl text-[#4A6572] max-w-3xl mx-auto leading-relaxed">
-        Har du frågor eller vill boka en kostnadsfri konsultation? Fyll i formuläret eller använd kontaktinformationen nedan. Vi svarar vanligtvis inom 24 timmar.
-      </p>
-    </section>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      Har du frågor eller vill boka service? Fyll i formuläret eller använd våra kontaktuppgifter nedan.
+    </p>
+  </section>
 
-    <!-- Grid: Info + Form -->
-    <div class="grid lg:grid-cols-2 gap-8 mb-16">
+  <!-- ================= GRID ================= -->
+  <div class="grid lg:grid-cols-2 gap-12 items-start">
 
-      <!-- Contact Info -->
-      <div class="bg-white p-8 rounded-xl shadow-lg border border-[#ECF0F1]">
-        <h2 class="text-2xl font-bold text-[#2C3E50] mb-6 pb-3 border-b border-gray-300">
+    <!-- ===== CONTACT INFO ===== -->
+    <div class="space-y-10">
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">
           Kontaktinformation
         </h2>
 
-        <div class="space-y-6">
-          <!-- Telefon -->
-          <div class="flex items-start">
-            <div class="p-3 rounded-full mr-4">
-              <span class="text-blue-600 text-xl"></span>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-800 mb-1">Telefon</h3>
-              <a href="tel:020104544" class="text-lg text-gray-700 hover:text-blue-600 transition duration-300">020-10 45 44</a>
-              
-            </div>
+        <div class="space-y-6 text-gray-600">
+
+          <div>
+            <p class="font-medium text-gray-800">Telefon</p>
+            <a href="tel:020104544" class="hover:underline">
+              020-10 45 44
+            </a>
           </div>
 
-          <!-- E-post -->
-          <div class="flex items-start">
-            <div class="p-3 rounded-full mr-4">
-              <span class="text-blue-600 text-xl"></span>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-800 mb-1">E-post</h3>
-              <a href="mailto:info@ecoventilation.se" class="text-lg text-gray-700 hover:text-blue-600 transition duration-300"> kundservice@ecoventilation.se</a>
-              
-            </div>
+          <div>
+            <p class="font-medium text-gray-800">E-post</p>
+            <a href="mailto:kundservice@ecoventilation.se" class="hover:underline">
+              kundservice@ecoventilation.se
+            </a>
           </div>
 
-          <!-- Adress -->
-          <div class="flex items-start">
-            <div class="p-3 rounded-full mr-4">
-              <span class="text-blue-600 text-xl"></span>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-800 mb-1">Adress</h3>
-              <p class="text-lg text-gray-700">Petregatan 1, 802 50 Gävle</p>
-             
-            </div>
+          <div>
+            <p class="font-medium text-gray-800">Adress</p>
+            <p>Petregatan 1, 802 50 Gävle</p>
           </div>
 
-          <!-- Öppettider -->
-          <div class="flex items-start">
-            <div class="p-3 rounded-full mr-4">
-              <span class="text-blue-600 text-xl"></span>
-            </div>
-            <div>
-              <h3 class="font-semibold text-gray-800 mb-1">Öppettider</h3>
-              <p class="text-lg text-gray-700">Måndag - Fredag: 10:00-14:00</p>
-              <p class="text-sm text-gray-500 mt-1">Lördag, Söndag: Stängt</p>
-            </div>
+          <div>
+            <p class="font-medium text-gray-800">Öppettider</p>
+            <p>Måndag – Fredag: 10:00 – 14:00</p>
+            <p class="text-sm text-gray-500">Lördag & Söndag: Stängt</p>
           </div>
-        </div>
 
-        <!-- Social Media -->
-        <div class="mt-10 pt-6 border-t border-gray-200">
-          <h3 class="text-xl font-bold text-[#2C3E50] mb-6">Följ oss på sociala medier</h3>
-          <div class="flex gap-4 flex-wrap">
-       <a href="https://www.facebook.com/profile.php?id=61586090752435" class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white hover:opacity-90 transition duration-300 transform hover:scale-110" aria-label="Facebook">
-  <span class="text-lg font-bold">f</span>
-</a>
-
-<a href="https://www.instagram.com/ecoventilation/" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90 transition duration-300 transform hover:scale-110" aria-label="Instagram">
-  <span class="text-lg font-bold">ig</span>
-</a>
-
-<a href="https://tiktok.com/@ecoventilation" class="w-12 h-12 flex items-center justify-center rounded-full bg-black text-white hover:opacity-90 transition duration-300 transform hover:scale-110" aria-label="TikTok">
-  <span class="text-lg font-bold">tt</span>
-</a>
-
-<a href="https://linkedin.com/company/ecoventilation" class="w-12 h-12 flex items-center justify-center rounded-full bg-blue-700 text-white hover:opacity-90 transition duration-300 transform hover:scale-110" aria-label="LinkedIn">
-  <span class="text-lg font-bold">in</span>
-</a>
-
-          </div>
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <ContactForm />
+      <!-- ===== SOCIAL ===== -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4">
+          Sociala Medier
+        </h3>
+
+        <div class="flex gap-6">
+
+          <a href="https://www.facebook.com/profile.php?id=61586090752435"
+            class="text-gray-700 hover:text-black transition">
+            Facebook
+          </a>
+
+          <a href="https://www.instagram.com/ecoventilation/"
+            class="text-gray-700 hover:text-black transition">
+            Instagram
+          </a>
+
+          <a href="https://tiktok.com/@ecoventilation"
+            class="text-gray-700 hover:text-black transition">
+            TikTok
+          </a>
+
+          <a href="https://linkedin.com/company/ecoventilation"
+            class="text-gray-700 hover:text-black transition">
+            LinkedIn
+          </a>
+
+        </div>
+      </div>
 
     </div>
 
-    <!-- CTA -->
-    <section class="text-center py-10 px-6 bg-[#2C3E50] text-white rounded-2xl mb-8">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">Behöver du hjälp?</h3>
-      <p class="text-lg mb-6 max-w-2xl mx-auto">Ring för ventilationsproblem som kräver omedelbar åtgärd.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="tel:020104544" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
-          Telefon: 020-10 45 44
-        </a>
-        <p class="text-white/80 text-sm">öppen Mån-Fre 10:00-14:00</p>
-      </div>
-    </section>
+    <!-- ===== FORM ===== -->
+    <div class="bg-white p-8 border border-gray-200 rounded-xl">
+      <ContactForm />
+    </div>
 
-  </main>
+  </div>
+
+  <!-- ================= SIMPLE CTA ================= -->
+  <section class="mt-20 text-center border-t pt-16">
+
+    <h3 class="text-2xl font-semibold mb-4">
+      Behöver du snabb hjälp?
+    </h3>
+
+    <p class="text-gray-600 mb-6">
+      Ring oss direkt så hjälper vi dig med ventilation och rensning.
+    </p>
+
+    <a href="tel:020104544"
+       class="inline-block border border-black px-8 py-4 rounded-lg hover:bg-black hover:text-white transition">
+       Ring 020-10 45 44
+    </a>
+
+  </section>
+
+</main>
+
 </BaseLayout>

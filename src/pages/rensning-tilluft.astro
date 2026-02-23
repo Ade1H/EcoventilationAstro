@@ -2,177 +2,197 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-  <head>
-    <title>Rensning av Tilluft – Gävle & Sverige</title>
-    <meta name="description" content="Professionell rengöring av tilluftssystem i hela Sverige. Förbättra inomhusluft, komfort och energieffektivitet med regelbunden service." />
-    <meta name="robots" content="index, follow" />
-  </head>
+<BaseLayout
+  title="Rensning av Tilluft – Gävle & Sverige"
+  description="Professionell rengöring av tilluftssystem i hela Sverige. Vi förbättrar luftkvalitet, komfort och energieffektivitet."
+>
 
-  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+<main class="max-w-[1200px] mx-auto px-6 py-20 text-gray-800">
 
-    <!-- FAQ JSON-LD -->
-    <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Hur ofta bör tilluftssystemet rengöras?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Professionell rengöring rekommenderas minst vartannat år, och årligen för hushåll med allergiker eller småbarn."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Vad ingår i rengöringen av tilluft?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Inspektion, rengöring av ventiler och kanaler, filtrering och eventuell desinfektion samt optimering av luftflöde."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Varför är rengöring viktigt?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ett rent tilluftssystem förbättrar luftkvaliteten, minskar allergirisken, ökar komforten och energieffektiviteten i hemmet."
-            }
-          }
-        ]
-      }
-    </script>
+<!-- ================= HERO ================= -->
 
-    <!-- Page Title -->
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Tilluft</h1>
-      <p class="text-gray-600 text-lg md:text-xl">
-        Tilluft tillför frisk utomhusluft till hemmet. Ett välskött system säkerställer hälsosamt inomhusklimat och jämn komfort, oavsett om du bor i Sverige.
-      </p>
-    </div>
+<section class="text-center mb-20">
+  <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    Rensning av Tilluft
+  </h1>
 
-    <!-- Images -->
-    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
-      <div class="rounded-xl overflow-hidden shadow-md">
-      <img 
-  src="/images/TillLuft.webp" 
-  alt="Tilluftsventiler i bostad" 
-  class="w-full h-64 md:h-80 object-cover" 
-  width="672" 
-  height="448" 
-  fetchpriority="high" 
-/>
+  <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+    Ett rent tilluftssystem ger frisk luft, jämn temperatur och bättre inomhuskomfort.
+  </p>
+</section>
+
+<!-- ================= IMAGES ================= -->
+
+<section class="grid md:grid-cols-2 gap-8 mb-20">
+  <img
+    src="/images/TillLuft.webp"
+    alt="Tilluftsventiler"
+    class="rounded-xl w-full h-80 object-cover"
+    width="672"
+    height="448"
+  />
+
+  <img
+    src="/images/tilluft.webp"
+    alt="Rengöring av tilluftssystem"
+    class="rounded-xl w-full h-80 object-cover"
+    width="672"
+    height="448"
+  />
+</section>
+
+<!-- ================= DESCRIPTION ================= -->
+
+<section class="mb-20 space-y-8 text-lg text-gray-600 leading-relaxed">
+
+  <h2 class="text-3xl font-semibold text-gray-800">
+    Vad är tilluft?
+  </h2>
+
+  <p>
+    Tilluft tillför frisk utomhusluft till bostaden via ventiler och kanaler.
+    Systemet ska vara rent och korrekt justerat för att säkerställa ett hälsosamt inomhusklimat.
+  </p>
+
+  <p>
+    Smutsiga ventiler och filter kan försämra luftflödet och öka damm,
+    allergier och energiförbrukning.
+  </p>
+
+</section>
+
+<!-- ================= COMPONENTS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-10 text-center">
+    Delar som rengörs
+  </h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    {[
+      "Tilluftsventiler – rengörs och justeras",
+      "Kanaler – dammsugs och kontrolleras",
+      "Filter – byts eller rengörs",
+      "Fläktar & luftfördelning – optimeras"
+    ].map((item) => (
+
+      <div class="border border-gray-200 rounded-xl p-6 text-lg">
+        {item}
       </div>
-      <div class="rounded-xl overflow-hidden shadow-md">
-        <img 
-          src="/images/tilluft.webp" 
-          alt="Rensning av Tilluft" 
-          class="w-full h-64 md:h-80 object-cover" 
-          loading="lazy" 
-          width="672" 
-          height="448" 
-        />
+
+    ))}
+
+  </div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-10 text-center">
+    Fördelar med ren tilluft
+  </h2>
+
+  <div class="border border-gray-200 rounded-xl p-8">
+
+    <ul class="space-y-4 text-lg text-gray-600 list-disc list-inside">
+      <li>Friskare inomhusluft</li>
+      <li>Mindre allergipåverkan</li>
+      <li>Bättre luftcirkulation</li>
+      <li>Ökad energieffektivitet</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- ================= WARNING ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-10 text-center">
+    Tecken på att service behövs
+  </h2>
+
+  <div class="border border-gray-200 rounded-xl p-8">
+
+    <ul class="space-y-4 text-lg text-gray-600 list-disc list-inside">
+      <li>Instängd luft i rummen</li>
+      <li>Mycket damm på ytor</li>
+      <li>Kondens på fönster</li>
+      <li>Försämrad luftkvalitet</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- ================= PROCESS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-10 text-center">
+    Så går rengöringen till
+  </h2>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    {[
+      "Inspektion",
+      "Rengöring av ventiler",
+      "Rengöring av kanaler",
+      "Justering & kontroll"
+    ].map((step, index) => (
+
+      <div class="border border-gray-200 rounded-xl p-6 text-center">
+
+        <div class="w-12 h-12 mx-auto mb-4 border border-black rounded-full flex items-center justify-center font-semibold">
+          {index + 1}
+        </div>
+
+        <p class="text-gray-700">{step}</p>
+
       </div>
-    </div>
 
-    <!-- Description -->
-    <div class="max-w-4xl mx-auto text-gray-700 mb-12 space-y-4">
-      <p>
-        Tilluftsventilation säkerställer kontinuerlig tillförsel av frisk luft till bostaden. Strategiskt placerade ventiler i sovrum, vardagsrum och andra rum ger ett balanserat och hälsosamt inomhusklimat.
-      </p>
-      <p>
-        Ventilerna bör hållas rena och korrekt inställda för att undvika försämrad luftkvalitet och hälsorisker. Regelbunden kontroll säkerställer att systemet fungerar optimalt.
-      </p>
-      <p>
-        Rengöring och service är viktiga för både luftkvalitet och energieffektivitet. Hur ofta det behövs beror på systemtyp: F-system var tredje år, S-system var fjärde år, FTX-system varierar mellan frånluft var tredje år och tilluft var sjätte år.
-      </p>
-      <p>
-        Luftfilter bör bytas årligen, och oftare i bostäder nära trafikerade vägar eller dammiga områden.
-      </p>
-    </div>
+    ))}
 
-    <!-- Components -->
-    <div class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-12">
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Tilluftsventiler – rengörs och kontrolleras</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Kanaler – dammsugs och desinficeras vid behov</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Filter – byts eller rengörs för optimal luftkvalitet</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Fläktar och luftfördelare – säkerställer jämnt luftflöde</div>
-    </div>
+  </div>
 
-    <!-- Benefits -->
-    <div class="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-12">
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Renare och friskare inomhusluft</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Minskad risk för allergier och irritation</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Bättre luftflöde och komfort i alla rum</div>
-      <div class="bg-white p-6 rounded-xl shadow-md text-center">Energieffektivisering genom optimerad ventilation</div>
-    </div>
+</section>
 
-    <!-- Warning Signs -->
-    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tecken på att service behövs</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Instängd eller unken luft i rummen</li>
-        <li>Ökad mängd damm på möbler och golv</li>
-        <li>Kondens på insidan av fönster</li>
-        <li>Förvärrade allergier inomhus</li>
-        <li>Torr luft eller irriterade luftvägar</li>
-      </ul>
-    </div>
+<!-- ================= CTA ================= -->
 
-    <!-- Process -->
-    <div class="max-w-6xl mx-auto mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Så går rengöringen till</h2>
-      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">1</div>
-          <h4 class="font-semibold text-gray-800 mb-2">Inspektion av hela tilluftssystemet</h4>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">2</div>
-          <h4 class="font-semibold text-gray-800 mb-2">Rengöring av ventiler och kanaler</h4>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">3</div>
-          <h4 class="font-semibold text-gray-800 mb-2">Filtrering och eventuell desinfektion</h4>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-md text-center">
-          <div class="w-12 h-12 rounded-full border border-gray-800 mx-auto flex items-center justify-center mb-3 font-semibold">4</div>
-          <h4 class="font-semibold text-gray-800 mb-2">Justering och optimering av luftflöde</h4>
-        </div>
-      </div>
-    </div>
+<section class="text-center py-20 border-t border-gray-200">
 
-    <!-- Recommendations -->
-    <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Rekommendationer</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Rengöring minst vartannat år</li>
-        <li>Årlig rengöring vid allergiker eller småbarn</li>
-        <li>Byt luftfilter regelbundet</li>
-      </ul>
-    </div>
+  <h2 class="text-3xl font-bold mb-6">
+    Säkra frisk luft i ditt hem
+  </h2>
 
-    <!-- CTA -->
-    <div class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
-      <h3 class="text-2xl font-semibold mb-2">Säkra frisk luft i hemmet</h3>
-      <p class="mb-4">Boka professionell rengöring av ditt tilluftssystem i Sverige</p>
-      <a href="/contact" class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg">
-        Kontakta oss
-      </a>
-    </div>
+  <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-lg">
+    Boka professionell rengöring av ditt tilluftssystem i Sverige.
+  </p>
 
-    <!-- Social Links med aria-label -->
-    <!-- <div class="flex justify-center gap-4 mt-12">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
-      <a href="https://tiktok.com/@ecoventilation" target="_blank" aria-label="TikTok" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="h-10 w-10 flex items-center justify-center rounded-full border border-gray-300"></a>
-    </div> -->
+  <div class="flex flex-wrap justify-center gap-6">
+    <a
+      href="/contact"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Kontakta oss
+    </a>
 
-    <!-- Smartsupp chat -->
-    <script src="https://widget-v3.smartsuppcdn.com/assets/main-AIm7gawg.js" defer></script>
+    <a
+      href="tel:+4620104544"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Ring 020-10 45 44
+    </a>
+  </div>
 
-  </main>
+</section>
+
+</main>
+
 </BaseLayout>

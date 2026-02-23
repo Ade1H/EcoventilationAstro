@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import cities from "../../data/swedish-cities.json";
+
+export async function getStaticPaths() {
+  return cities.map(city => ({
+    params: { city: city.slug },
+    props: { city }
+  }));
+}
+
+const { city } = Astro.props;
+---
+
+<BaseLayout
+  title={`Ventilation ${city.name} | Ventilationsservice`}
+  description={`Professionell ventilationsservice i ${city.name}. Vi erbjuder kanalrensning, FTX service, luftflödesmätning och injustering.`}
+>
+
+<main class="max-w-6xl mx-auto px-6 py-20">
+
+<section class="mb-12">
+  <h1 class="text-4xl font-bold mb-4">
+    Ventilationsservice i {city.name}
+  </h1>
+
+  <p class="text-lg text-gray-600">
+    Vi är en certifierad ventilationsfirma som erbjuder
+    <strong>kanalrensning</strong>,
+    <strong>imkanal rengöring</strong>,
+    <strong>FTX service</strong>,
+    <strong>luftflödesmätning</strong> och
+    <strong>injustering ventilation</strong>
+    i {city.name}.
+  </p>
+</section>
+
+<section class="grid md:grid-cols-2 gap-6">
+
+  <div class="border p-6 rounded-lg">
+    <h2 class="font-semibold text-xl mb-3">
+      Våra Tjänster
+    </h2>
+
+    <ul class="space-y-2">
+      <li>✔ Rensning av ventilationskanaler</li>
+      <li>✔ Rensning av imkanal</li>
+      <li>✔ FTX service</li>
+      <li>✔ Luftflödesmätning</li>
+      <li>✔ Injustering ventilation</li>
+      <li>✔ Rensning av avloppskanaler</li>
+    </ul>
+  </div>
+
+  <div class="border p-6 rounded-lg">
+    <h2 class="font-semibold text-xl mb-3">
+      Boka Service i {city.name}
+    </h2>
+
+    <a
+      href="/contact"
+      class="inline-block mt-4 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
+    >
+      Kontakta oss
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+</BaseLayout>

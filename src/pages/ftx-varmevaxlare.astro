@@ -3,131 +3,175 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-  <head>
-    <title>FTX & Värmeväxlare – Service och Underhåll i Sverige</title>
-    <meta name="description" content="Ecoventilation erbjuder professionell FTX-service och underhåll av värmeväxlare i Sverige. Regelbunden service ger energieffektivitet och god inomhuskomfort." />
-    <meta name="robots" content="index, follow" />
-  </head>
+<BaseLayout
+  title="FTX & Värmeväxlare – Service och Underhåll i Sverige"
+  description="Professionell FTX-service och underhåll av värmeväxlare i Sverige. Vi hjälper fastigheter och bostäder med filterbyte, rengöring och energieffektiv optimering."
+>
 
-  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+<main class="max-w-[1200px] mx-auto px-6 py-20 text-gray-800">
 
-    <!-- FAQ JSON-LD -->
-    <script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Hur ofta bör FTX-systemet servas i Sverige?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Filter bör rengöras eller bytas var 3–6 månad, en årlig kontroll rekommenderas och djupservice vart 3–5 år för bästa funktion och energieffektivitet."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Kan jag boka akut FTX-service i Sverige?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ja, kontakta oss via formulär eller telefon för snabb assistans vid akuta problem med FTX-systemet."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Varför är regelbundet underhåll viktigt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Regelbunden service säkerställer god luftkvalitet, energieffektivitet och förebygger problem med fukt eller mögel i byggnader i Sverige."
-      }
-    }
-  ]
-}
-</script>
+<!-- ================= HERO ================= -->
 
-    <!-- Page Title -->
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-        FTX & Värmeväxlare – Service och Underhåll
-      </h1>
-      <p class="text-gray-600 text-lg md:text-xl">
-        FTX-system styr till- och frånluften och återvinner värmen i byggnaden. Regelbundet underhåll i Sverige säkerställer energieffektivitet och stabil inomhuskomfort.
-      </p>
-    </div>
+<section class="text-center mb-20">
+  <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    FTX & Värmeväxlare – Service och Underhåll
+  </h1>
 
-    <!-- Images -->
-    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
-      <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/FTX.webp" alt="FTX / Värmeväxlare - Illustration i Sverige" class="w-full h-64 md:h-80 object-cover" />
+  <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+    FTX-system återvinner värme och förbättrar luftkvaliteten.
+    Regelbunden service säkerställer energieffektiv drift och stabil inomhuskomfort.
+  </p>
+</section>
+
+<!-- ================= IMAGES ================= -->
+
+<section class="grid md:grid-cols-2 gap-8 mb-20">
+  <img
+    src="/images/FTX.webp"
+    alt="FTX system"
+    class="rounded-xl w-full h-80 object-cover"
+  />
+
+  <img
+    src="/images/ftxPic.webp"
+    alt="FTX värmeväxlare i ventilationssystem"
+    class="rounded-xl w-full h-80 object-cover"
+  />
+</section>
+
+<!-- ================= WHAT IS FTX ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-6">
+    Vad är en FTX / värmeväxlare?
+  </h2>
+
+  <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+    <p>
+      FTX står för från- och tilluft med värmeåtervinning.
+      Systemet återvinner värme från den utgående luften och förvärmer
+      den friska luften som tas in i byggnaden.
+    </p>
+
+    <p>
+      Detta minskar energiförbrukningen och ger ett jämnt och behagligt
+      inomhusklimat året runt.
+    </p>
+
+    <p>
+      Systemet består av separata luftkanaler och en värmeväxlare som
+      möjliggör effektiv energiöverföring mellan luftströmmarna.
+    </p>
+  </div>
+
+</section>
+
+<!-- ================= MAINTENANCE ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-8">
+    Underhåll och rengöring av FTX
+  </h2>
+
+  <div class="border border-gray-200 rounded-xl p-10">
+    <ol class="space-y-5 text-gray-600 text-lg list-decimal list-inside">
+      <li>
+        <strong>Skapa en underhållsplan</strong> – Planera regelbunden inspektion och service.
+      </li>
+
+      <li>
+        <strong>Inspektion</strong> – Kontroll av komponenter, läckor och slitage.
+      </li>
+
+      <li>
+        <strong>Filterbyte</strong> – Filter bör rengöras eller bytas var 3–6 månad.
+      </li>
+
+      <li>
+        <strong>Djupservice</strong> – Grundlig rengöring rekommenderas vart 3–5 år.
+      </li>
+    </ol>
+  </div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    Fördelar med regelbunden FTX-service
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    {[
+      "Effektiv värmeåtervinning och energibesparing",
+      "Förbättrad luftkvalitet",
+      "Stabil inomhustemperatur",
+      "Förebygger fukt och mögel",
+      "Längre livslängd på systemet"
+    ].map((item) => (
+      <div class="border border-gray-200 rounded-xl p-6 text-lg">
+        {item}
       </div>
-      <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/ftxPic.webp" alt="FTX-system i ventilationsaggregat i Sverige" class="w-full h-64 md:h-80 object-cover" />
-      </div>
-    </div>
+    ))}
 
-    <!-- Description -->
-    <section class="max-w-4xl mx-auto space-y-6 text-gray-700 mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Vad är en FTX / värmeväxlare?</h2>
-      <p>
-        FTX-system (Från- och Tilluft med värmeåtervinning) återvinner värme från den utgående luften och förvärmer den friska luften som tas in. Detta ger energieffektiv uppvärmning under vinter och kan även bidra till svalare inomhusluft på sommaren.
-      </p>
-      <p>
-        Systemet består av två separata luftströmmar som passerar genom ett korsat kanalnätverk i värmeväxlaren, vilket möjliggör effektiv värmeöverföring mellan till- och frånluften.
-      </p>
-      <p>
-        Genom att återanvända värmeenergin minskar behovet av extern uppvärmning och kylning, vilket kan ge betydande energibesparingar och jämn inomhustemperatur året runt – i hela Sverige.
-      </p>
-    </section>
+  </div>
 
-    <!-- Maintenance -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Underhåll och rengöring av FTX</h2>
-      <p>
-        För att optimera prestanda och förlänga livslängden på värmeväxlare och FTX-system är regelbundet underhåll avgörande. Detta inkluderar inspektion, rengöring och filterbyte.
-      </p>
-      <ol class="list-decimal list-inside space-y-3 text-gray-600">
-        <li><strong>Skapa en underhållsplan:</strong> Planera datum för inspektion, rengöring och filterbyte.</li>
-        <li><strong>Inspektion:</strong> Kontrollera systemet för slitage, läckor eller skador, samt att alla komponenter är korrekt monterade.</li>
-        <li><strong>Filterrengöring:</strong> Luftfilter bör rengöras eller bytas regelbundet, vanligtvis var 6:e månad. Följ alltid tillverkarens rekommendationer.</li>
-        <li><strong>Djupservice:</strong> Var 3–5 år rekommenderas en grundlig rengöring av aggregatet och rörsystemet, samt eventuellt byte av filter.</li>
-      </ol>
-    </section>
+</section>
 
-    <!-- Benefits -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Fördelar med regelbunden FTX-service</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Effektiv värmeåtervinning och energibesparing</li>
-        <li>Förbättrad luftkvalitet med ren tilluft</li>
-        <li>Stabil inomhustemperatur året runt</li>
-        <li>Förebyggande mot fukt och mögel</li>
-        <li>Längre livslängd på ventilationssystemet</li>
-      </ul>
-    </section>
+<!-- ================= WARNING ================= -->
 
-    <!-- Warning Signs -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">När är det dags för service?</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Försämrad luftkvalitet</li>
-        <li>Ökad energiförbrukning</li>
-        <li>Ovanliga ljud från aggregatet</li>
-        <li>Ojämn temperatur i byggnaden</li>
-      </ul>
-    </section>
+<section class="mb-20">
 
-    <!-- CTA -->
-    <section class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
-      <h3 class="text-2xl font-semibold mb-2">Behöver du FTX-service i Sverige?</h3>
-      <p class="mb-4">Kontakta oss för professionell rengöring, filterbyte och underhåll av ditt FTX-system för optimal funktion och energieffektivitet.</p>
-      <a
-        href="/contact"
-        class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
-      >
-        Kontakta oss
-      </a>
-    </section>
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    När behöver du service?
+  </h2>
 
-  </main>
+  <div class="border border-gray-200 rounded-xl p-8">
+    <ul class="space-y-4 text-gray-600 text-lg list-disc list-inside">
+      <li>Försämrad luftkvalitet</li>
+      <li>Ökad energiförbrukning</li>
+      <li>Ovanliga ljud från aggregatet</li>
+      <li>Ojämn temperatur</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="text-center py-20 border-t border-gray-200">
+
+  <h2 class="text-3xl font-bold mb-6">
+    Behöver du FTX-service?
+  </h2>
+
+  <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-lg">
+    Kontakta oss för filterbyte, rengöring och professionell service av ditt ventilationssystem.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    <a
+      href="/contact"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Kontakta oss
+    </a>
+
+    <a
+      href="tel:+4620104544"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Ring 020-10 45 44
+    </a>
+  </div>
+
+</section>
+
+</main>
+
 </BaseLayout>

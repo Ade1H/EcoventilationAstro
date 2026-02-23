@@ -1,136 +1,182 @@
 ---
+// File: src/pages/franluft.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout>
-  <head>
-    <title>Rensning av Frånluftsventilation – Sverige</title>
-    <meta name="description" content="Ecoventilation erbjuder professionell rengöring av frånluftsventilation i hela Sverige. Regelbundet underhåll förbättrar luftkvalitet och energieffektivitet." />
-    <meta name="robots" content="index, follow" />
-  </head>
+<BaseLayout
+  title="Rensning av Frånluftsventilation – Sverige"
+  description="Professionell rengöring av frånluftsventilation i hela Sverige. Förbättra luftkvalitet och energieffektivitet med regelbundet underhåll."
+>
 
-  <main class="bg-gray-50 min-h-screen px-4 py-16 md:py-24 font-sans">
+<main class="max-w-[1200px] mx-auto px-6 py-20 text-gray-800">
 
-    <!-- FAQ JSON-LD -->
-    <script type="application/ld+json" is:inline>
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Hur ofta bör frånluftssystemet rengöras i Sverige?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Vi rekommenderar rengöring vartannat till vart tredje år. Hushåll med husdjur eller rökning kan behöva tätare underhåll."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Varför är rengöring av frånluft viktigt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "För att förhindra mögel, förbättra luftkvalitet och bibehålla energieffektiv ventilation i hem och byggnader i Sverige."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Vad ingår vid rengöring av frånluftssystemet?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Inspektion av kanaler, mekanisk rengöring, sanering av bakterier/mögel och justering av systemet."
-      }
-    }
-  ]
-}
-</script>
+<!-- ================= HERO ================= -->
 
-    <!-- Page Title -->
-    <div class="max-w-3xl mx-auto text-center mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Rensning av Frånluftsventilation</h1>
-      <p class="text-gray-600 text-lg md:text-xl">
-        Frånluftsventilation tar bort fuktig och förorenad luft från kök, badrum och tvättstuga, vilket bidrar till ett hälsosamt och balanserat inomhusklimat i hela Sverige.
-      </p>
-    </div>
+<section class="text-center mb-20">
+  <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    Rensning av Frånluftsventilation
+  </h1>
 
-    <!-- Images -->
-    <div class="max-w-6xl mx-auto grid gap-6 mb-12 grid-cols-1 md:grid-cols-2">
-      <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/franL (1).webp" alt="Rensning av frånluft - bild 1 i Sverige" class="w-full h-64 md:h-80 object-cover" />
+  <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+    Frånluftsventilation tar bort fukt och förorenad luft från byggnaden.
+    Regelbunden rengöring säkerställer bättre inomhusklimat och lägre energiförbrukning.
+  </p>
+</section>
+
+<!-- ================= IMAGES ================= -->
+
+<section class="grid md:grid-cols-2 gap-8 mb-20">
+  <img
+    src="/images/franL (1).webp"
+    alt="Rensning av frånluft"
+    class="rounded-xl w-full h-80 object-cover"
+  />
+
+  <img
+    src="/images/Frånluft.webp"
+    alt="Frånluftsventilation system"
+    class="rounded-xl w-full h-80 object-cover"
+  />
+</section>
+
+<!-- ================= DESCRIPTION ================= -->
+
+<section class="mb-20 space-y-8 text-lg text-gray-600 leading-relaxed">
+
+  <h2 class="text-3xl font-semibold text-gray-800">
+    Vad är frånluftsventilation?
+  </h2>
+
+  <p>
+    Frånluftsventilation fungerar genom att avlägsna förorenad luft från
+    kök, badrum och andra fuktiga utrymmen. Systemet skapar ett undertryck
+    som drar in frisk luft från bostaden eller fastigheten.
+  </p>
+
+  <p>
+    I moderna och täta byggnader är korrekt funktion avgörande för att
+    undvika fuktproblem, mögel och dålig luftkvalitet.
+  </p>
+
+  <p>
+    Vår rengöring säkerställer att kanaler, ventiler och fläktar fungerar
+    optimalt – i hela Sverige.
+  </p>
+
+</section>
+
+<!-- ================= AREAS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    Vanliga områden som rengörs
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    {[
+      "Kök – fett och matos",
+      "Badrum – fukt och mögel",
+      "Tvättstuga – ludd och rester",
+      "Toaletter – bakterier och lukt"
+    ].map((item) => (
+      <div class="border border-gray-200 rounded-xl p-6 text-lg">
+        {item}
       </div>
-      <div class="rounded-xl overflow-hidden shadow-md">
-        <img src="/images/Frånluft.webp" alt="Rensning av frånluftssystem i Sverige" class="w-full h-64 md:h-80 object-cover" />
-      </div>
-    </div>
+    ))}
 
-    <!-- Description -->
-    <section class="max-w-4xl mx-auto space-y-6 text-gray-700 mb-12">
-      <p>
-        Frånluftsventilation fungerar genom att mekaniskt avlägsna använd luft från byggnaden och skapa ett undertryck som drar in frisk luft. Detta är särskilt viktigt i moderna, täta byggnader.
-      </p>
-      <p>
-        Systemet finns i kök, badrum, tvättstuga och andra utrymmen där fukt och lukt uppstår. Ett välskött system förhindrar mögel, dålig lukt och minskar energiförbrukningen, i Sverige.
-      </p>
-      <p>
-        I vissa byggnader används även värmeåtervinning, där värmen från den utgående luften förs över till den inkommande friska luften. Detta förbättrar energieffektiviteten och skapar ett jämnt inomhusklimat året runt.
-      </p>
-    </section>
+  </div>
 
-    <!-- Areas -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Vanliga områden som rengörs</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Kök – fett, matos och fukt</li>
-        <li>Badrum – fukt och mögel</li>
-        <li>Tvättstuga – ludd och tvättmedelsrester</li>
-        <li>Toaletter – bakterier och lukter</li>
-      </ul>
-    </section>
+</section>
 
-    <!-- Warning Signs -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tecken på att systemet behöver rensas</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Unken eller dålig lukt</li>
-        <li>Kondens på fönster eller speglar</li>
-        <li>Mögel på väggar eller i fogar</li>
-        <li>Långsam avfuktning efter dusch</li>
-        <li>Hög ljudnivå från ventilationssystemet</li>
-      </ul>
-    </section>
+<!-- ================= WARNING ================= -->
 
-    <!-- Process -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Så går rengöringen till</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Inspektion av kanaler och ventilationsdon</li>
-        <li>Mekanisk rengöring med borstar och sug</li>
-        <li>Sanering av bakterier och mögel vid behov</li>
-        <li>Justering och funktionskontroll av systemet</li>
-      </ul>
-    </section>
+<section class="mb-20">
 
-    <!-- Recommendations -->
-    <section class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-12">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Rekommendationer</h2>
-      <ul class="list-disc list-inside space-y-2 text-gray-600">
-        <li>Rengöring rekommenderas vartannat till vart tredje år</li>
-        <li>Hushåll med husdjur eller rökning kan behöva tätare underhåll</li>
-        <li>Ett rent system ger bättre luftkvalitet och lägre energikostnader</li>
-      </ul>
-    </section>
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    Tecken på att systemet behöver rensas
+  </h2>
 
-    <!-- CTA -->
-    <section class="max-w-4xl mx-auto bg-gray-800 text-white text-center p-8 rounded-xl shadow-md">
-      <h3 class="text-2xl font-semibold mb-2">Friskare luft i ditt hem i Sverige</h3>
-      <p class="mb-4">Boka professionell rengöring av ditt frånluftssystem för bättre luftkvalitet och energieffektivitet.</p>
-      <a
-        href="/contact"
-        class="btn-primary inline-block bg-white text-[#2C3E50] font-bold py-4 px-8 rounded-lg hover:bg-gray-100 hover:text-green-800 transition duration-300 text-lg"
-      >
-        Kontakta oss
-      </a>
-    </section>
+  <div class="border border-gray-200 rounded-xl p-8">
+    <ul class="space-y-4 text-lg text-gray-600 list-disc list-inside">
+      <li>Unken eller dålig lukt</li>
+      <li>Kondens på fönster</li>
+      <li>Mögel på väggar eller fogar</li>
+      <li>Långsam avfuktning</li>
+      <li>Hög ljudnivå från systemet</li>
+    </ul>
+  </div>
 
-  </main>
+</section>
+
+<!-- ================= PROCESS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    Så går rengöringen till
+  </h2>
+
+  <div class="border border-gray-200 rounded-xl p-8">
+    <ul class="space-y-4 text-lg text-gray-600 list-decimal list-inside">
+      <li>Inspektion av kanaler och ventiler</li>
+      <li>Mekanisk rengöring med professionell utrustning</li>
+      <li>Sanering vid behov</li>
+      <li>Funktionskontroll och justering</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= RECOMMENDATIONS ================= -->
+
+<section class="mb-20">
+
+  <h2 class="text-3xl font-semibold mb-8 text-center">
+    Rekommendationer
+  </h2>
+
+  <div class="border border-gray-200 rounded-xl p-8">
+    <ul class="space-y-4 text-lg text-gray-600 list-disc list-inside">
+      <li>Rengör vart 2–3 år</li>
+      <li>Tätare underhåll vid husdjur eller rökning</li>
+      <li>Regelbunden service förbättrar luft och energieffektivitet</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="text-center py-20 border-t border-gray-200">
+
+  <h2 class="text-3xl font-bold mb-6">
+    Behöver du hjälp med frånluftsventilation?
+  </h2>
+
+  <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-lg">
+    Kontakta oss för professionell rengöring och optimering av ditt system.
+  </p>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    <a
+      href="/contact"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Kontakta oss
+    </a>
+
+    <a
+      href="tel:+4620104544"
+      class="px-8 py-4 border border-black rounded-lg hover:bg-black hover:text-white transition"
+    >
+      Ring 020-10 45 44
+    </a>
+  </div>
+
+</section>
+
+</main>
+
 </BaseLayout>
