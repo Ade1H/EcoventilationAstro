@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import cities from "../../data/swedish-cities-with-region.json";
+import { slugify } from "../../utils/slug";
+
+/* ===== STATIC PATHS ===== */
+
+export async function getStaticPaths() {
+  const regions = [...new Set(cities.map(c => c.region))];
+
+  return regions.map(region => ({
+    params: {
+      region: slugify(region)
+    },
+    props: {
+      regionName: region
+    }
+  }));
+}
+
+const { regionName } = Astro.props;
+
+/* ===== FILTER CITIES BY SLUG ===== */
+
+const regionCities = cities.filter(
+  (city) => slugify(city.region) === slugify(regionName)
+);
+---
+
+<BaseLayout
+  title={`Ventilation i ${regionName} | Ecoventilation`}
+  description={`Ventilationsservice och kanalrensning i ${regionName}.`}
+>
+
+<main class="max-w-5xl mx-auto px-6 py-20">
+
+  <h1 class="text-3xl font-bold mb-6">
+    Ventilation i {regionName}
+  </h1>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+    {regionCities.map((city) => (
+      <a
+        href={`/ventilation/${city.slug}`}
+        class="border rounded-lg px-4 py-3 hover:bg-black hover:text-white transition"
+      >
+        {city.name}
+      </a>
+    ))}
+  </div>
+
+</main>
+
+</BaseLayout>

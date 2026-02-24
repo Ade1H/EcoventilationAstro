@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import cities from "../../data/swedish-cities-with-region.json";
+import { slugify } from "../../utils/slug";
+
+/* ===== STATIC PATHS ===== */
+
+export async function getStaticPaths() {
+  return cities.map(city => ({
+    params: { slug: city.slug },
+    props: { city }
+  }));
+}
+
+const { city } = Astro.props;
+---
+
+<BaseLayout
+  title={`Ventilationsservice i ${city.name} | Ecoventilation`}
+  description={`Vi erbjuder kanalrensning, FTX service och ventilationsservice i ${city.name}.`}
+>
+
+<main class="max-w-5xl mx-auto px-6 py-20">
+
+  <!-- 🔥 HERO -->
+  <section class="mb-12">
+    <h1 class="text-4xl font-bold mb-6">
+      Ventilationsservice i {city.name}
+    </h1>
+
+    <p class="text-lg text-gray-600 max-w-3xl">
+      Vi är en certifierad ventilationsfirma som erbjuder
+      kanalrensning, imkanal rengöring, FTX service,
+      luftflödesmätning och injustering ventilation i {city.name}.
+    </p>
+  </section>
+
+  <!-- 🔥 SERVICES -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4">
+      Våra Tjänster
+    </h2>
+
+        <li class="mb-4">
+  <strong>Tilluft & Frånluft – Installation, rengöring och optimering</strong>
+  <p class="text-sm text-gray-600">
+    Vi installerar, justerar och optimerar tilluft och frånluft för bättre luftflöde och inomhusklimat i {city.name}.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Avloppsspolning – Rensning av avloppssystem</strong>
+  <p class="text-sm text-gray-600">
+    Effektiv spolning och rengöring av avloppsledningar för att undvika stopp och problem.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Rengöring & Rensning av ventilationskanaler</strong>
+  <p class="text-sm text-gray-600">
+    Vi avlägsnar damm, smuts och partiklar för bättre luftkvalitet och ökad brandsäkerhet.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Rengöring & Rensning av avloppskanaler</strong>
+  <p class="text-sm text-gray-600">
+    Professionell rengöring av avloppskanaler för att förhindra stopp och dålig lukt.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Imkanal – Rengöring & Brandsäker Kontroll</strong>
+  <p class="text-sm text-gray-600">
+    Vi rengör och kontrollerar imkanaler för att minska brandrisk och förbättra ventilationen.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Kanalfläkt & Takfläkt – Service och Reparation</strong>
+  <p class="text-sm text-gray-600">
+    Service, felsökning och underhåll av fläktar för stabil och energieffektiv ventilation.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Ventilationsservice & Underhåll</strong>
+  <p class="text-sm text-gray-600">
+    Regelbunden service som förbättrar luftflöde, minskar energiförbrukning och ökar livslängden på systemet.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Köksfläkt – Installation, Service & Rengöring</strong>
+  <p class="text-sm text-gray-600">
+    Installation och rengöring av köksfläkt för effektiv bortledning av matos och fett.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Värmeväxlare – Service & Rengöring</strong>
+  <p class="text-sm text-gray-600">
+    Rengöring och service av värmeväxlare för bättre energieffektivitet och inomhusklimat.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Vattenlås – Rensning & Underhåll</strong>
+  <p class="text-sm text-gray-600">
+    Vi rensar och underhåller vattenlås för att förhindra stopp och dålig lukt.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Luft-luft Värmepump – Installation & Service</strong>
+  <p class="text-sm text-gray-600">
+    Installation, service och optimering av luft-luft värmepumpar för effektiv uppvärmning.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>AC Service – Rengöring, Felsökning & Reparation</strong>
+  <p class="text-sm text-gray-600">
+    Professionell service och rengöring av AC-system för bättre prestanda och hållbarhet.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Luftvärmepump – Installation & Optimering</strong>
+  <p class="text-sm text-gray-600">
+    Vi installerar och optimerar luftvärmepumpar för energieffektiv drift.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>FTX System – Service, Filterbyte & Rengöring</strong>
+  <p class="text-sm text-gray-600">
+    Service av FTX-system inklusive rengöring och filterbyte för bättre ventilation.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Luftflödesmätning & Ventilationskontroll</strong>
+  <p class="text-sm text-gray-600">
+    Mätning och kontroll av luftflöden för att säkerställa korrekt ventilation och balans.
+  </p>
+</li>
+
+<li class="mb-4">
+  <strong>Injustering av Ventilation – Optimering av Luftbalans</strong>
+  <p class="text-sm text-gray-600">
+    Vi justerar ventilationssystemet så att luftflödet blir korrekt och energieffektivt.
+  </p>
+</li>
+  </section>
+
+  <!-- 🔥 CTA -->
+  <section class="bg-gray-100 p-8 rounded-xl text-center">
+    <h2 class="text-2xl font-bold mb-4">
+      Boka Service i {city.name}
+    </h2>
+
+    <p class="mb-6 text-gray-600">
+      Kontakta oss idag för offert och bokning.
+    </p>
+
+    <a
+      href="/contact"
+      class="bg-black text-white px-6 py-3 rounded-lg hover:opacity-80 transition"
+    >
+      Kontakta oss
+    </a>
+  </section>
+
+</main>
+
+</BaseLayout>

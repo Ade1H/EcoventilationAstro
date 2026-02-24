@@ -8,113 +8,102 @@ import ContactForm from '../components/ContactForm.astro';
   description="Kontakta Ecoventilation för professionell ventilationsservice, rensning och FTX-underhåll i Sverige."
 >
 
-<main class="max-w-[1200px] mx-auto px-6 py-16 font-sans text-gray-800">
+<main class="max-w-[1200px] mx-auto px-6 py-20 font-sans text-gray-800">
 
-  <!-- ================= HERO ================= -->
-  <section class="mb-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+  <!-- HERO -->
+  <section class="mb-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-[#2C3E50]">
       Kontakta Oss
     </h1>
 
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-      Har du frågor eller vill boka service? Fyll i formuläret eller använd våra kontaktuppgifter nedan.
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+      Har du frågor eller vill boka service? Fyll i formuläret så återkommer vi inom 24 timmar.
     </p>
   </section>
 
-  <!-- ================= GRID ================= -->
-  <div class="grid lg:grid-cols-2 gap-12 items-start">
+  <!-- CONTACT SECTION -->
+  <section class="flex flex-col lg:flex-row gap-12 items-start">
 
-    <!-- ===== CONTACT INFO ===== -->
-    <div class="space-y-10">
+    <!-- LEFT SIDE -->
+    <div class="flex-1 bg-white p-8 rounded-xl shadow-lg border border-[#ECF0F1]">
 
-      <div>
-        <h2 class="text-2xl font-semibold mb-4 border-b pb-2">
-          Kontaktinformation
-        </h2>
+      <h2 class="text-2xl font-bold text-[#2C3E50] mb-6 pb-3 border-b border-gray-300">
+        Kontaktinformation
+      </h2>
 
-        <div class="space-y-6 text-gray-600">
+      <div class="space-y-8 text-gray-700">
 
-          <div>
-            <p class="font-medium text-gray-800">Telefon</p>
-            <a href="tel:020104544" class="hover:underline">
-              020-10 45 44
-            </a>
-          </div>
-
-          <div>
-            <p class="font-medium text-gray-800">E-post</p>
-            <a href="mailto:kundservice@ecoventilation.se" class="hover:underline">
-              kundservice@ecoventilation.se
-            </a>
-          </div>
-
-          <div>
-            <p class="font-medium text-gray-800">Adress</p>
-            <p>Petregatan 1, 802 50 Gävle</p>
-          </div>
-
-          <div>
-            <p class="font-medium text-gray-800">Öppettider</p>
-            <p>Måndag – Fredag: 10:00 – 14:00</p>
-            <p class="text-sm text-gray-500">Lördag & Söndag: Stängt</p>
-          </div>
-
+        <div>
+          <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">Telefon</p>
+          <a href="tel:020104544"
+             class="text-lg font-semibold hover:text-[#2C3E50] transition">
+            020-10 45 44
+          </a>
         </div>
+
+        <div>
+          <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">E-post</p>
+          <a href="mailto:kundservice@ecoventilation.se"
+             class="text-lg font-semibold hover:text-[#2C3E50] transition">
+            kundservice@ecoventilation.se
+          </a>
+        </div>
+
+        <div>
+          <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">Adress</p>
+          <p class="text-lg font-semibold">
+            Petregatan 1, 802 50 Gävle
+          </p>
+        </div>
+
+        <div>
+          <p class="text-sm text-gray-500 uppercase tracking-wide mb-1">Öppettider</p>
+          <p class="text-lg font-semibold">
+            Måndag – Fredag: 10:00 – 14:00
+          </p>
+          <p class="text-sm text-gray-500">
+            Lördag & Söndag: Stängt
+          </p>
+        </div>
+
       </div>
 
-      <!-- ===== SOCIAL ===== -->
-      <div>
-        <h3 class="text-xl font-semibold mb-4">
-          Sociala Medier
+      <!-- Social -->
+      <div class="mt-10 pt-6 border-t border-gray-200">
+        <h3 class="text-lg font-semibold text-[#2C3E50] mb-4">
+          Följ oss
         </h3>
 
-        <div class="flex gap-6">
-
-          <a href="https://www.facebook.com/profile.php?id=61586090752435"
-            class="text-gray-700 hover:text-black transition">
-            Facebook
-          </a>
-
-          <a href="https://www.instagram.com/ecoventilation/"
-            class="text-gray-700 hover:text-black transition">
-            Instagram
-          </a>
-
-          <a href="https://tiktok.com/@ecoventilation"
-            class="text-gray-700 hover:text-black transition">
-            TikTok
-          </a>
-
-          <a href="https://linkedin.com/company/ecoventilation"
-            class="text-gray-700 hover:text-black transition">
-            LinkedIn
-          </a>
-
+        <div class="flex gap-6 text-gray-600">
+          <a href="#" class="hover:text-[#2C3E50] transition">Facebook</a>
+          <a href="#" class="hover:text-[#2C3E50] transition">Instagram</a>
+          <a href="#" class="hover:text-[#2C3E50] transition">TikTok</a>
+          <a href="#" class="hover:text-[#2C3E50] transition">LinkedIn</a>
         </div>
       </div>
 
     </div>
 
-    <!-- ===== FORM ===== -->
-    <div class="bg-white p-8 border border-gray-200 rounded-xl">
+    <!-- RIGHT SIDE -->
+    <div class="flex-1 min-w-0">
       <ContactForm />
     </div>
 
-  </div>
+  </section>
 
-  <!-- ================= SIMPLE CTA ================= -->
-  <section class="mt-20 text-center border-t pt-16">
+  <!-- CTA -->
+  <section class="mt-24 text-center border-t pt-16">
 
-    <h3 class="text-2xl font-semibold mb-4">
+    <h3 class="text-2xl font-semibold mb-6 text-[#2C3E50]">
       Behöver du snabb hjälp?
     </h3>
 
-    <p class="text-gray-600 mb-6">
-      Ring oss direkt så hjälper vi dig med ventilation och rensning.
+    <p class="text-gray-600 mb-8">
+      Ring oss direkt så hjälper vi dig.
     </p>
 
     <a href="tel:020104544"
-       class="inline-block border border-black px-8 py-4 rounded-lg hover:bg-black hover:text-white transition">
+       class="inline-block bg-[#2C3E50] text-white px-10 py-4 rounded-lg font-semibold hover:bg-[#1f2f3a] transition shadow">
        Ring 020-10 45 44
     </a>
 

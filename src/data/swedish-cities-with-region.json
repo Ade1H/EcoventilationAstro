@@ -1,0 +1,1402 @@
+[
+  {
+    "name": "Ale",
+    "slug": "ale",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Alingsås",
+    "slug": "alingsas",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Alvesta",
+    "slug": "alvesta",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Aneby",
+    "slug": "aneby",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Arboga",
+    "slug": "arboga",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Arjeplog",
+    "slug": "arjeplog",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Arvidsjaur",
+    "slug": "arvidsjaur",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Arvika",
+    "slug": "arvika",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Askersund",
+    "slug": "askersund",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Avesta",
+    "slug": "avesta",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Bengtsfors",
+    "slug": "bengtsfors",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Berg",
+    "slug": "berg",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Bjurholm",
+    "slug": "bjurholm",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Bjuv",
+    "slug": "bjuv",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Boden",
+    "slug": "boden",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Bollebygd",
+    "slug": "bollebygd",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Bollnäs",
+    "slug": "bollnas",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Borgholm",
+    "slug": "borgholm",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Borlänge",
+    "slug": "borlange",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Borås",
+    "slug": "boras",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Botkyrka",
+    "slug": "botkyrka",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Boxholm",
+    "slug": "boxholm",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Bräcke",
+    "slug": "bracke",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Bromölla",
+    "slug": "bromolla",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Burlöv",
+    "slug": "burlov",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Dals-Ed",
+    "slug": "dals-ed",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Danderyd",
+    "slug": "danderyd",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Degerfors",
+    "slug": "degerfors",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Dorotea",
+    "slug": "dorotea",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Eda",
+    "slug": "eda",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Ekerö",
+    "slug": "ekero",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Eksjö",
+    "slug": "eksjo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Emmaboda",
+    "slug": "emmaboda",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Enköping",
+    "slug": "enkoping",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Eskilstuna",
+    "slug": "eskilstuna",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Eslöv",
+    "slug": "eslov",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Essunga",
+    "slug": "essunga",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Fagersta",
+    "slug": "fagersta",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Falkenberg",
+    "slug": "falkenberg",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Falköping",
+    "slug": "falkoping",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Falun",
+    "slug": "falun",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Filipstad",
+    "slug": "filipstad",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Finspång",
+    "slug": "finspang",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Flen",
+    "slug": "flen",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Forshaga",
+    "slug": "forshaga",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Färgelanda",
+    "slug": "fargelanda",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Gagnef",
+    "slug": "gagnef",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Gislaved",
+    "slug": "gislaved",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Gnesta",
+    "slug": "gnesta",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Gnosjö",
+    "slug": "gnosjo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Gotland",
+    "slug": "gotland",
+    "region": "Gotlands län"
+  },
+  {
+    "name": "Grums",
+    "slug": "grums",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Grästorp",
+    "slug": "grastorp",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Gullspång",
+    "slug": "gullspang",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Gällivare",
+    "slug": "gallivare",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Gävle",
+    "slug": "gavle",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Göteborg",
+    "slug": "goteborg",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Götene",
+    "slug": "gotene",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Habo",
+    "slug": "habo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Hagfors",
+    "slug": "hagfors",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Hallsberg",
+    "slug": "hallsberg",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Hallstahammar",
+    "slug": "hallstahammar",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Halmstad",
+    "slug": "halmstad",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Hammarö",
+    "slug": "hammaro",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Haninge",
+    "slug": "haninge",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Haparanda",
+    "slug": "haparanda",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Heby",
+    "slug": "heby",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Hedemora",
+    "slug": "hedemora",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Helsingborg",
+    "slug": "helsingborg",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Herrljunga",
+    "slug": "herrljunga",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Hjo",
+    "slug": "hjo",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Hofors",
+    "slug": "hofors",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Huddinge",
+    "slug": "huddinge",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Hudiksvall",
+    "slug": "hudiksvall",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Hultsfred",
+    "slug": "hultsfred",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Hylte",
+    "slug": "hylte",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Hällefors",
+    "slug": "hallefors",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Härjedalen",
+    "slug": "harjedalen",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Härnösand",
+    "slug": "harnosand",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Härryda",
+    "slug": "harryda",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Hässleholm",
+    "slug": "hassleholm",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Höganäs",
+    "slug": "hoganas",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Högsby",
+    "slug": "hogsby",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Hörby",
+    "slug": "horby",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Höör",
+    "slug": "hoor",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Jokkmokk",
+    "slug": "jokkmokk",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Järfälla",
+    "slug": "jarfalla",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Jönköping",
+    "slug": "jonkoping",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Kalix",
+    "slug": "kalix",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Kalmar",
+    "slug": "kalmar",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Karlsborg",
+    "slug": "karlsborg",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Karlshamn",
+    "slug": "karlshamn",
+    "region": "Blekinge län"
+  },
+  {
+    "name": "Karlskoga",
+    "slug": "karlskoga",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Karlskrona",
+    "slug": "karlskrona",
+    "region": "Blekinge län"
+  },
+  {
+    "name": "Karlstad",
+    "slug": "karlstad",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Katrineholm",
+    "slug": "katrineholm",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Kil",
+    "slug": "kil",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Kinda",
+    "slug": "kinda",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Kiruna",
+    "slug": "kiruna",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Klippan",
+    "slug": "klippan",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Knivsta",
+    "slug": "knivsta",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Kramfors",
+    "slug": "kramfors",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Kristianstad",
+    "slug": "kristianstad",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Kristinehamn",
+    "slug": "kristinehamn",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Krokom",
+    "slug": "krokom",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Kumla",
+    "slug": "kumla",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Kungsbacka",
+    "slug": "kungsbacka",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Kungsör",
+    "slug": "kungsor",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Kungälv",
+    "slug": "kungalv",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Kävlinge",
+    "slug": "kavlinge",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Köping",
+    "slug": "koping",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Laholm",
+    "slug": "laholm",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Landskrona",
+    "slug": "landskrona",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Laxå",
+    "slug": "laxa",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Lekeberg",
+    "slug": "lekeberg",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Leksand",
+    "slug": "leksand",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Lerum",
+    "slug": "lerum",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Lessebo",
+    "slug": "lessebo",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Lidingö",
+    "slug": "lidingo",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Lidköping",
+    "slug": "lidkoping",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Lilla Edet",
+    "slug": "lilla-edet",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Lindesberg",
+    "slug": "lindesberg",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Linköping",
+    "slug": "linkoping",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Ljungby",
+    "slug": "ljungby",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Ljusdal",
+    "slug": "ljusdal",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Lomma",
+    "slug": "lomma",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Ludvika",
+    "slug": "ludvika",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Luleå",
+    "slug": "lulea",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Lund",
+    "slug": "lund",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Lycksele",
+    "slug": "lycksele",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Lysekil",
+    "slug": "lysekil",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Malmö",
+    "slug": "malmo",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Malung-Sälen",
+    "slug": "malung-salen",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Malå",
+    "slug": "mala",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Mariestad",
+    "slug": "mariestad",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Mark",
+    "slug": "mark",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Markaryd",
+    "slug": "markaryd",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Mellerud",
+    "slug": "mellerud",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Mjölby",
+    "slug": "mjolby",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Mora",
+    "slug": "mora",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Motala",
+    "slug": "motala",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Mullsjö",
+    "slug": "mullsjo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Munkedal",
+    "slug": "munkedal",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Munkfors",
+    "slug": "munkfors",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Mölndal",
+    "slug": "molndal",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Mönsterås",
+    "slug": "monsteras",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Mörbylånga",
+    "slug": "morbylanga",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Nacka",
+    "slug": "nacka",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Nora",
+    "slug": "nora",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Norberg",
+    "slug": "norberg",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Nordanstig",
+    "slug": "nordanstig",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Nordmaling",
+    "slug": "nordmaling",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Norrköping",
+    "slug": "norrkoping",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Norrtälje",
+    "slug": "norrtalje",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Norsjö",
+    "slug": "norsjo",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Nybro",
+    "slug": "nybro",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Nykvarn",
+    "slug": "nykvarn",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Nyköping",
+    "slug": "nykoping",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Nynäshamn",
+    "slug": "nynashamn",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Nässjö",
+    "slug": "nassjo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Ockelbo",
+    "slug": "ockelbo",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Olofström",
+    "slug": "olofstrom",
+    "region": "Blekinge län"
+  },
+  {
+    "name": "Orsa",
+    "slug": "orsa",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Orust",
+    "slug": "orust",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Osby",
+    "slug": "osby",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Oskarshamn",
+    "slug": "oskarshamn",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Ovanåker",
+    "slug": "ovanaker",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Oxelösund",
+    "slug": "oxelosund",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Pajala",
+    "slug": "pajala",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Partille",
+    "slug": "partille",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Perstorp",
+    "slug": "perstorp",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Piteå",
+    "slug": "pitea",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Ragunda",
+    "slug": "ragunda",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Robertsfors",
+    "slug": "robertsfors",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Ronneby",
+    "slug": "ronneby",
+    "region": "Blekinge län"
+  },
+  {
+    "name": "Rättvik",
+    "slug": "rattvik",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Sala",
+    "slug": "sala",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Salem",
+    "slug": "salem",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Sandviken",
+    "slug": "sandviken",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Sigtuna",
+    "slug": "sigtuna",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Simrishamn",
+    "slug": "simrishamn",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Sjöbo",
+    "slug": "sjobo",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Skara",
+    "slug": "skara",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Skellefteå",
+    "slug": "skelleftea",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Skinnskatteberg",
+    "slug": "skinnskatteberg",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Skövde",
+    "slug": "skovde",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Smedjebacken",
+    "slug": "smedjebacken",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Sollefteå",
+    "slug": "solleftea",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Sollentuna",
+    "slug": "sollentuna",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Solna",
+    "slug": "solna",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Sorsele",
+    "slug": "sorsele",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Sotenäs",
+    "slug": "sotenas",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Staffanstorp",
+    "slug": "staffanstorp",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Stenungsund",
+    "slug": "stenungsund",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Stockholm",
+    "slug": "stockholm",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Storfors",
+    "slug": "storfors",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Storuman",
+    "slug": "storuman",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Strängnäs",
+    "slug": "strangnas",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Strömstad",
+    "slug": "stromstad",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Strömsund",
+    "slug": "stromsund",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Sundbyberg",
+    "slug": "sundbyberg",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Sundsvall",
+    "slug": "sundsvall",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Sunne",
+    "slug": "sunne",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Surahammar",
+    "slug": "surahammar",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Svalöv",
+    "slug": "svalov",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Svedala",
+    "slug": "svedala",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Svenljunga",
+    "slug": "svenljunga",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Säffle",
+    "slug": "saffle",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Säter",
+    "slug": "sater",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Sävsjö",
+    "slug": "savsjo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Söderhamn",
+    "slug": "soderhamn",
+    "region": "Gävleborgs län"
+  },
+  {
+    "name": "Söderköping",
+    "slug": "soderkoping",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Södertälje",
+    "slug": "sodertalje",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Sölvesborg",
+    "slug": "solvesborg",
+    "region": "Blekinge län"
+  },
+  {
+    "name": "Tanum",
+    "slug": "tanum",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Tibro",
+    "slug": "tibro",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Tidaholm",
+    "slug": "tidaholm",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Tierp",
+    "slug": "tierp",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Timrå",
+    "slug": "timra",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Tingsryd",
+    "slug": "tingsryd",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Tjörn",
+    "slug": "tjorn",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Tomelilla",
+    "slug": "tomelilla",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Torsby",
+    "slug": "torsby",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Torsås",
+    "slug": "torsas",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Tranemo",
+    "slug": "tranemo",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Tranås",
+    "slug": "tranas",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Trelleborg",
+    "slug": "trelleborg",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Trollhättan",
+    "slug": "trollhattan",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Trosa",
+    "slug": "trosa",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Tyresö",
+    "slug": "tyreso",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Täby",
+    "slug": "taby",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Töreboda",
+    "slug": "toreboda",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Uddevalla",
+    "slug": "uddevalla",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Ulricehamn",
+    "slug": "ulricehamn",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Umeå",
+    "slug": "umea",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Upplands Väsby",
+    "slug": "upplands-vasby",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Upplands-Bro",
+    "slug": "upplands-bro",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Vadstena",
+    "slug": "vadstena",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Vaggeryd",
+    "slug": "vaggeryd",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Valdemarsvik",
+    "slug": "valdemarsvik",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Vallentuna",
+    "slug": "vallentuna",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Vansbro",
+    "slug": "vansbro",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Vara",
+    "slug": "vara",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Varberg",
+    "slug": "varberg",
+    "region": "Hallands län"
+  },
+  {
+    "name": "Vaxholm",
+    "slug": "vaxholm",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Vellinge",
+    "slug": "vellinge",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Vetlanda",
+    "slug": "vetlanda",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Vilhelmina",
+    "slug": "vilhelmina",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Vimmerby",
+    "slug": "vimmerby",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Vindeln",
+    "slug": "vindeln",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Vingåker",
+    "slug": "vingaker",
+    "region": "Södermanlands län"
+  },
+  {
+    "name": "Vänersborg",
+    "slug": "vanersborg",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Vännäs",
+    "slug": "vannas",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Värmdö",
+    "slug": "varmdo",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Värnamo",
+    "slug": "varnamo",
+    "region": "Jönköpings län"
+  },
+  {
+    "name": "Västervik",
+    "slug": "vastervik",
+    "region": "Kalmar län"
+  },
+  {
+    "name": "Västerås",
+    "slug": "vasteras",
+    "region": "Västmanlands län"
+  },
+  {
+    "name": "Växjö",
+    "slug": "vaxjo",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Ydre",
+    "slug": "ydre",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Ystad",
+    "slug": "ystad",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Åmål",
+    "slug": "amal",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Ånge",
+    "slug": "ange",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Åre",
+    "slug": "are",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Årjäng",
+    "slug": "arjang",
+    "region": "Värmlands län"
+  },
+  {
+    "name": "Åsele",
+    "slug": "asele",
+    "region": "Västerbottens län"
+  },
+  {
+    "name": "Åstorp",
+    "slug": "astorp",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Åtvidaberg",
+    "slug": "atvidaberg",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Älmhult",
+    "slug": "almhult",
+    "region": "Kronobergs län"
+  },
+  {
+    "name": "Älvdalen",
+    "slug": "alvdalen",
+    "region": "Dalarnas län"
+  },
+  {
+    "name": "Älvkarleby",
+    "slug": "alvkarleby",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Älvsbyn",
+    "slug": "alvsbyn",
+    "region": "Norrbottens län"
+  },
+  {
+    "name": "Öckerö",
+    "slug": "ockero",
+    "region": "Västra Götalands län"
+  },
+  {
+    "name": "Ödeshög",
+    "slug": "odeshog",
+    "region": "Östergötlands län"
+  },
+  {
+    "name": "Örebro",
+    "slug": "orebro",
+    "region": "Örebro län"
+  },
+  {
+    "name": "Örkelljunga",
+    "slug": "orkelljunga",
+    "region": "Skåne län"
+  },
+  {
+    "name": "Örnsköldsvik",
+    "slug": "ornskoldsvik",
+    "region": "Västernorrlands län"
+  },
+  {
+    "name": "Östersund",
+    "slug": "ostersund",
+    "region": "Jämtlands län"
+  },
+  {
+    "name": "Österåker",
+    "slug": "osteraker",
+    "region": "Stockholms län"
+  },
+  {
+    "name": "Östhammar",
+    "slug": "osthammar",
+    "region": "Uppsala län"
+  },
+  {
+    "name": "Östra Göinge",
+    "slug": "ostra-goinge",
+    "region": "Skåne län"
+  }
+]

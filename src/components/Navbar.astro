@@ -1,31 +1,24 @@
-i dont like how navbar look in mobile screen : ---
-/* Minimal Navbar with dropdown and hamburger menu */
+---
+/* Clean Mobile Navbar */
 ---
 
-<nav class="bg-[#2C3E50] relative z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<nav class="bg-[#2C3E50] relative z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
     <!-- LOGO -->
     <a href="/" class="flex items-center gap-3">
-     <!--  <img
+      <img 
         src="/images/logo.png"
         alt="Ecoventilation Logo"
-        width="55"
-        height="55"
+        width="50"
+        height="50"
         class="rounded-lg"
-      />  -->
-            <img 
-            src="/images/logo.png"
-            alt="Ecoventilation Logo"
-            width="55"
-            height="55"
-            class="rounded-lg"
-            />
+      />
       <div class="flex flex-col">
-        <span class="text-lg font-bold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+        <span class="text-lg font-bold text-white">
           Ecoventilation
         </span>
-        <span class="text-xs text-gray-300">
+        <span class="text-xs text-gray-300 hidden sm:block">
           Ventilation och avloppsservice
         </span>
       </div>
@@ -33,55 +26,51 @@ i dont like how navbar look in mobile screen : ---
 
     <!-- HAMBURGER -->
     <button
-      class="md:hidden flex flex-col gap-1"
+      class="md:hidden flex flex-col gap-1.5"
       aria-label="Menu"
       data-menu-toggle
     >
-      <span class="h-0.5 w-6 bg-white transition"></span>
-      <span class="h-0.5 w-6 bg-white transition"></span>
-      <span class="h-0.5 w-6 bg-white transition"></span>
+      <span class="h-0.5 w-6 bg-white"></span>
+      <span class="h-0.5 w-6 bg-white"></span>
+      <span class="h-0.5 w-6 bg-white"></span>
     </button>
 
-    <!-- LINKS -->
+    <!-- MENU -->
     <ul
       class="nav-menu absolute md:static top-full left-0 w-full md:w-auto
-      bg-[#2C3E50] md:bg-transparent hidden md:flex
-      md:items-center gap-8 p-6 md:p-0"
+      bg-[#2C3E50] md:bg-transparent
+      hidden md:flex flex-col md:flex-row
+      md:items-center gap-6 p-6 md:p-0"
     >
-      <li><a href="/" class="text-white hover:text-blue-300 transition">Hem</a></li>
+      <li><a href="/" class="nav-link text-white hover:text-blue-300 transition">Hem</a></li>
 
       <!-- SERVICES DROPDOWN -->
       <li class="relative">
         <button
           class="text-white hover:text-blue-300 transition flex items-center gap-1"
           data-dropdown-toggle
-          aria-expanded="false"
         >
           Tjänster ▼
         </button>
 
         <ul
-          class="dropdown-menu hidden absolute left-0 mt-2 bg-[#34495E]
-          rounded-lg w-64 py-2 z-50 shadow-lg"
+          class="dropdown-menu hidden md:absolute md:left-0 md:mt-2
+          bg-[#34495E] rounded-lg w-full md:w-64 py-2 shadow-lg"
         >
-          <li><a href="/rensning-imkanal" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Imkanal</a></li>
-          <li><a href="/ftx-varmevaxlare" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">FTX / Värmeväxlare</a></li>
-          <li><a href="/avloppsrensning-spolning" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">Avloppsrensning</a></li>
-          <li><a href="/rensning-franluft" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Frånluft</a></li>
-          <li><a href="/rensning-tilluft" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Tilluft</a></li>
-          <li><a href="/rensning-luft-luft" class="block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Luft-Luft</a></li>
-          <li>
-  <a href="/service-omraden" 
-     class="block px-4 py-2 text-white hover:bg-gray-700 rounded">
-     Serviceområden
-  </a>
-</li>
+          <li><a href="/rensning-imkanal" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Imkanal</a></li>
+          <li><a href="/ftx-varmevaxlare" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">FTX / Värmeväxlare</a></li>
+          <li><a href="/avloppsrensning-spolning" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Avloppsrensning</a></li>
+          <li><a href="/rensning-franluft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Frånluft</a></li>
+          <li><a href="/rensning-tilluft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Tilluft</a></li>
+          <li><a href="/rensning-luft-luft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Luft-Luft</a></li>
+          <li><a href="/service-omraden" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Serviceområden</a></li>
         </ul>
       </li>
 
-      <li><a href="/contact" class="text-white hover:text-blue-300 transition">Kontakt</a></li>
-      <li><a href="/about" class="text-white hover:text-blue-300 transition">Om</a></li>
+      <li><a href="/contact" class="nav-link text-white hover:text-blue-300 transition">Kontakt</a></li>
+      <li><a href="/about" class="nav-link text-white hover:text-blue-300 transition">Om</a></li>
     </ul>
+
   </div>
 </nav>
 
@@ -90,19 +79,32 @@ i dont like how navbar look in mobile screen : ---
   const menu = document.querySelector('.nav-menu');
   const dropdownBtn = document.querySelector('[data-dropdown-toggle]');
   const dropdown = document.querySelector('.dropdown-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
 
-  menuBtn?.addEventListener('click', () => menu.classList.toggle('hidden'));
-  
+  // Toggle mobile menu
+  menuBtn?.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking any link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      dropdown?.classList.add('hidden');
+    });
+  });
+
+  // Toggle dropdown
   dropdownBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
     dropdown.classList.toggle('hidden');
-    dropdownBtn.setAttribute('aria-expanded', !dropdown.classList.contains('hidden'));
   });
 
+  // Close everything when clicking outside
   document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target) && !dropdownBtn.contains(e.target)) {
-      dropdown.classList.add('hidden');
-      dropdownBtn.setAttribute('aria-expanded', 'false');
+    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      menu.classList.add('hidden');
+      dropdown?.classList.add('hidden');
     }
   });
 </script>
