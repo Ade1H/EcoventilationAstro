@@ -1,7 +1,7 @@
 ---
 const slides = [
   {
-    image: "/images/opendor.webp",
+    image: "/images/fonster.webp",
     title: "Välkommen till Ecoventilation",
     description: "Vi hjälper dig att optimera din ventilation för en bättre inomhusmiljö och lägre energikostnader.",
     
@@ -13,13 +13,13 @@ description: "Professionell rengöring av imkanaler för att minska brandrisk oc
     
   },
   {
-    image: "/images/vent.webp",
+    image: "/images/ventilation.webp",
     title: "Ventilationsservice",
     description: "Regelbunden rengöring och underhåll för optimal inomhusluftkvalitet.",
     
   },
     {
-    image: "/images/ftxish.webp",
+    image: "/images/ftxx.webp",
    title: "FTX-service",
 description: "Service och underhåll av FTX-ventilation för optimal värmeåtervinning och energieffektiv inomhusmiljö.",
   
@@ -33,10 +33,10 @@ description: "Service och underhåll av FTX-ventilation för optimal värmeåter
 
 ];
 ---
-<section class="relative h-[85vh] min-h-[600px] max-h-[800px] w-full overflow-hidden" id="hero-carousel">
+<section class="relative h-[85vh] min-h-[600px] max-h-[800px] w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-2xl" id="hero-carousel">
 
   {slides.map((slide, idx) => (
-    <div class="absolute inset-0 transition-opacity duration-700" data-slide={idx}>
+    <div class="absolute inset-0 transition-opacity duration-700 rounded-2xl md:rounded-3xl overflow-hidden" data-slide={idx}>
       <img src={slide.image} alt={slide.title} class="object-cover w-full h-full" />
       <div class="absolute inset-0 bg-black/25 z-10" />
       <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center">
@@ -58,8 +58,8 @@ description: "Service och underhåll av FTX-ventilation för optimal värmeåter
     ))}
   </div>
 
-  <!-- Progress bar -->
-  <div class="absolute bottom-0 left-0 z-30 h-1 w-full bg-white/20">
+  <!-- Progress bar - now with border radius at bottom -->
+  <div class="absolute bottom-0 left-0 z-30 h-1 w-full bg-white/20 overflow-hidden rounded-b-2xl md:rounded-b-3xl">
     <div class="h-full bg-[#3498DB]" id="progress-bar" style="width:0%"></div>
   </div>
 </section>
