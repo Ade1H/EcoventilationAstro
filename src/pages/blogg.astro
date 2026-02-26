@@ -1,59 +1,161 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
+
+/* ===============================
+   🔥 ALLA TJÄNSTER SOM ARTIKLAR
+=================================*/
+
+const posts = [
+
+{
+title: "Tilluft & Frånluft – Installation och Optimering",
+category: "Ventilation",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad är tilluft och frånluft?</h3>
+<p>Tilluft för in frisk luft i byggnaden. Frånluft tar bort förorenad luft och fukt.</p>
+
+<h3 class="text-xl font-bold mt-6">Varför behövs det?</h3>
+<p>Utan korrekt luftbalans blir inomhusluften dålig, fukt kan bildas och energiförbrukningen ökar.</p>
+
+<h3 class="text-xl font-bold mt-6">När behövs service?</h3>
+<p>När luftflödet känns svagt, när ventilationen låter konstigt eller vid nyinstallation.</p>
+
+<h3 class="text-xl font-bold mt-6">Hur fungerar det?</h3>
+<p>Vi justerar fläktar, ventiler och luftkanaler för att skapa en optimal balans mellan tilluft och frånluft.</p>
+`
+},
+
+{
+title: "Avloppsspolning – Rensning av Avloppssystem",
+category: "Avlopp",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad är avloppsspolning?</h3>
+<p>Högtrycksrengöring av avloppsrör för att ta bort fett, smuts och blockeringar.</p>
+
+<h3 class="mt-6 text-xl font-bold">Varför behövs det?</h3>
+<p>Avlagringar byggs upp över tid och orsakar stopp och dålig lukt.</p>
+
+<h3 class="mt-6 text-xl font-bold">När behövs det?</h3>
+<p>När vatten rinner långsamt, vid återkommande stopp eller vid luktproblem.</p>
+
+<h3 class="mt-6 text-xl font-bold">Hur fungerar det?</h3>
+<p>Vi använder specialutrustning med högt tryck som rengör rören invändigt.</p>
+`
+},
+
+{
+title: "Rengöring av Ventilationskanaler",
+category: "Ventilation",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad är kanalrengöring?</h3>
+<p>Rengöring av ventilationskanaler från damm, smuts och partiklar.</p>
+
+<h3 class="mt-6 text-xl font-bold">Varför behövs det?</h3>
+<p>Smutsiga kanaler försämrar luftkvaliteten och ökar brandrisken.</p>
+
+<h3 class="mt-6 text-xl font-bold">När behövs det?</h3>
+<p>Vid dålig lukt, lågt luftflöde eller regelbundet underhåll.</p>
+
+<h3 class="mt-6 text-xl font-bold">Hur fungerar det?</h3>
+<p>Vi använder borstar, sug och specialutrustning för att rengöra kanalerna effektivt.</p>
+`
+},
+
+{
+title: "Imkanal – Rengöring & Brandsäker Kontroll",
+category: "Säkerhet",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad är en imkanal?</h3>
+<p>En kanal som transporterar bort matos från kök.</p>
+
+<h3 class="mt-6 text-xl font-bold">Varför behövs rengöring?</h3>
+<p>Fett ansamlas och kan orsaka brandrisk.</p>
+
+<h3 class="mt-6 text-xl font-bold">När behövs det?</h3>
+<p>Regelbunden kontroll krävs enligt brandsäkerhetsregler.</p>
+
+<h3 class="mt-6 text-xl font-bold">Hur fungerar det?</h3>
+<p>Vi rengör mekaniskt och kontrollerar att systemet uppfyller säkerhetskrav.</p>
+`
+},
+
+{
+title: "Kanalfläkt & Takfläkt – Service och Reparation",
+category: "Ventilation",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad gör en fläkt?</h3>
+<p>Den driver luftcirkulationen i ventilationssystemet.</p>
+
+<h3 class="mt-6 text-xl font-bold">Varför behövs service?</h3>
+<p>Slitage kan minska effektiviteten och öka energiförbrukningen.</p>
+
+<h3 class="mt-6 text-xl font-bold">När ska den servas?</h3>
+<p>Vid missljud, svag ventilation eller årlig kontroll.</p>
+
+<h3 class="mt-6 text-xl font-bold">Hur fungerar servicen?</h3>
+<p>Vi kontrollerar motor, lager och funktion samt byter slitna delar.</p>
+`
+},
+
+{
+title: "FTX System – Service, Filterbyte & Rengöring",
+category: "Ventilation",
+date: "2026-02-26",
+content: `
+<h3 class="text-xl font-bold">Vad är ett FTX-system?</h3>
+<p>Ett ventilationssystem med värmeåtervinning.</p>
+
+<h3 class="mt-6 text-xl font-bold">Varför behövs service?</h3>
+<p>Smutsiga filter minskar effektiviteten och ökar energiförbrukningen.</p>
+
+<h3 class="mt-6 text-xl font-bold">När behövs det?</h3>
+<p>Minst 1 gång per år eller vid minskat luftflöde.</p>
+
+<h3 class="mt-6 text-xl font-bold">Hur fungerar det?</h3>
+<p>Vi byter filter, rengör komponenter och optimerar luftbalansen.</p>
+`
+}
+
+];
+
+/* Sortera nyaste först */
+posts.sort((a,b)=> new Date(b.date) - new Date(a.date));
 ---
 
-<Layout title="Blogg | EcoVentilation">
+<Layout title="Serviceartiklar | EcoVentilation">
 
 <section class="max-w-5xl mx-auto px-6 py-24">
 
-  <!-- HERO -->
-  <div class="text-center mb-16">
-    <h1 class="text-4xl md:text-5xl font-bold">
-      Blogg & Nyheter
-    </h1>
-    <p class="text-gray-600 mt-4 text-lg">
-      Tips och uppdateringar om ventilation och service
-    </p>
-  </div>
+<h1 class="text-5xl font-bold text-center mb-16">
+Service & Förklaringar
+</h1>
 
-  <!-- BLOG CARDS -->
-  <div class="grid md:grid-cols-2 gap-10">
+<div class="space-y-20">
 
-    <!-- BLOG 1 -->
-    <div class="bg-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition">
-      <span class="text-sm text-gray-500">2026-02-25</span>
-      <h2 class="text-2xl font-semibold mt-2">
-        Ventilation i villa – Så fungerar det
-      </h2>
+{posts.map(post => (
 
-      <p class="text-gray-700 mt-4">
-        Ventilation är viktigt för att skapa ett friskt inomhusklimat och
-        minska fukt och dålig luft.
-      </p>
+<article class="border rounded-3xl p-10 shadow-sm">
 
-      <button class="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
-        Läs mer
-      </button>
-    </div>
+<h2 class="text-3xl font-bold mb-2">
+{post.title}
+</h2>
 
-    <!-- BLOG 2 -->
-    <div class="bg-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition">
-      <span class="text-sm text-gray-500">2026-03-10</span>
-      <h2 class="text-2xl font-semibold mt-2">
-        När behöver man service?
-      </h2>
+<div class="text-sm text-gray-500 mb-6">
+{post.category} • {post.date}
+</div>
 
-      <p class="text-gray-700 mt-4">
-        Regelbunden service förbättrar luftflödet och förlänger livslängden
-        på ventilationssystemet.
-      </p>
+<div class="prose max-w-none" set:html={post.content} />
 
-      <button class="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
-        Läs mer
-      </button>
-    </div>
+</article>
 
-  </div>
+))}
+
+</div>
 
 </section>
 
