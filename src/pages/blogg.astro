@@ -1,24 +1,60 @@
 ---
-import { getCollection } from "astro:content";
-
-const posts = await getCollection("blog");
-
-const sortedPosts = posts.sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
-);
+import Layout from "../layouts/BaseLayout.astro";
 ---
 
-<h1>Blogg</h1>
+<Layout title="Blogg | EcoVentilation">
 
-{sortedPosts.map((post) => (
-  <div>
-    <h2>
-      <a href={`/blogg/${post.slug}`}>
-        {post.data.title}
-      </a>
-    </h2>
+<section class="max-w-5xl mx-auto px-6 py-24">
 
-    <p>{post.data.description}</p>
-    <small>{post.data.date.toLocaleDateString()}</small>
+  <!-- HERO -->
+  <div class="text-center mb-16">
+    <h1 class="text-4xl md:text-5xl font-bold">
+      Blogg & Nyheter
+    </h1>
+    <p class="text-gray-600 mt-4 text-lg">
+      Tips och uppdateringar om ventilation och service
+    </p>
   </div>
-))}
+
+  <!-- BLOG CARDS -->
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- BLOG 1 -->
+    <div class="bg-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition">
+      <span class="text-sm text-gray-500">2026-02-25</span>
+      <h2 class="text-2xl font-semibold mt-2">
+        Ventilation i villa – Så fungerar det
+      </h2>
+
+      <p class="text-gray-700 mt-4">
+        Ventilation är viktigt för att skapa ett friskt inomhusklimat och
+        minska fukt och dålig luft.
+      </p>
+
+      <button class="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+        Läs mer
+      </button>
+    </div>
+
+    <!-- BLOG 2 -->
+    <div class="bg-gray-100 rounded-3xl p-8 shadow-sm hover:shadow-xl transition">
+      <span class="text-sm text-gray-500">2026-03-10</span>
+      <h2 class="text-2xl font-semibold mt-2">
+        När behöver man service?
+      </h2>
+
+      <p class="text-gray-700 mt-4">
+        Regelbunden service förbättrar luftflödet och förlänger livslängden
+        på ventilationssystemet.
+      </p>
+
+      <button class="mt-6 px-6 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition">
+        Läs mer
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+</Layout>
