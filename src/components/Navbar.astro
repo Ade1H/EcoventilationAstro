@@ -1,11 +1,6 @@
----
-/* Clean Mobile Navbar */
----
-
-<nav class="bg-[#2C3E50] relative z-50 shadow-md">
+<nav class="bg-white sticky top-0 z-[100] shadow-md border-b border-gray-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
 
-    <!-- LOGO -->
     <a href="/" class="flex items-center gap-3">
       <img 
         src="/images/logo.png"
@@ -15,39 +10,36 @@
         class="rounded-lg"
       />
       <div class="flex flex-col">
-        <span class="text-lg font-bold text-white">
+        <span class="text-lg font-bold text-gray-900">
           Ecoventilation
         </span>
-        <span class="text-xs text-gray-300 hidden sm:block">
+        <span class="text-xs text-gray-500 hidden sm:block">
           Ventilation och avloppsservice
         </span>
       </div>
     </a>
 
-    <!-- HAMBURGER -->
     <button
       class="md:hidden flex flex-col gap-1.5"
       aria-label="Menu"
       data-menu-toggle
     >
-      <span class="h-0.5 w-6 bg-white"></span>
-      <span class="h-0.5 w-6 bg-white"></span>
-      <span class="h-0.5 w-6 bg-white"></span>
+      <span class="h-0.5 w-6 bg-gray-900"></span>
+      <span class="h-0.5 w-6 bg-gray-900"></span>
+      <span class="h-0.5 w-6 bg-gray-900"></span>
     </button>
 
-    <!-- MENU -->
     <ul
       class="nav-menu absolute md:static top-full left-0 w-full md:w-auto
-      bg-[#2C3E50] md:bg-transparent
+      bg-white md:bg-transparent
       hidden md:flex flex-col md:flex-row
-      md:items-center gap-6 p-6 md:p-0"
+      md:items-center gap-6 p-6 md:p-0 border-t md:border-none border-gray-100"
     >
-      <li><a href="/" class="nav-link text-white hover:text-blue-300 transition">Hem</a></li>
+      <li><a href="/" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Hem</a></li>
 
-      <!-- SERVICES DROPDOWN -->
       <li class="relative">
         <button
-          class="text-white hover:text-blue-300 transition flex items-center gap-1"
+          class="text-gray-800 hover:text-blue-600 transition flex items-center gap-1 font-medium"
           data-dropdown-toggle
         >
           Tjänster ▼
@@ -55,38 +47,37 @@
 
         <ul
           class="dropdown-menu hidden md:absolute md:left-0 md:mt-2
-          bg-[#34495E] rounded-lg w-full md:w-64 py-2 shadow-lg"
+          bg-white border border-gray-200 rounded-lg w-full md:w-64 py-2 shadow-xl"
         >
-          <li><a href="/rensning-imkanal" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Imkanal</a></li>
-          <li><a href="/ftx-varmevaxlare" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">FTX / Värmeväxlare</a></li>
-          <li><a href="/avloppsrensning-spolning" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Avloppsrensning</a></li>
-          <li><a href="/rensning-franluft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Frånluft</a></li>
-          <li><a href="/rensning-tilluft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Tilluft</a></li>
-          <li><a href="/rensning-luft-luft" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Rensning Luft-Luft</a></li>
-          <li><a href="/service-omraden" class="nav-link block px-4 py-2 text-white hover:bg-gray-700 rounded">Serviceområden</a></li>
+          <li><a href="/rensning-imkanal" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Imkanal</a></li>
+          <li><a href="/ftx-varmevaxlare" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">FTX / Värmeväxlare</a></li>
+          <li><a href="/avloppsrensning-spolning" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Avloppsrensning</a></li>
+          <li><a href="/rensning-franluft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Frånluft</a></li>
+          <li><a href="/rensning-tilluft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Tilluft</a></li>
+          <li><a href="/rensning-luft-luft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Luft-Luft</a></li>
+          <li><a href="/service-omraden" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Serviceområden</a></li>
         </ul>
       </li>
 
-      <li><a href="/contact" class="nav-link text-white hover:text-blue-300 transition">Kontakt</a></li>
-      <li><a href="/about" class="nav-link text-white hover:text-blue-300 transition">Om</a></li>
+      <li><a href="/contact" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Kontakt</a></li>
+      <li><a href="/about" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Om</a></li>
     </ul>
 
   </div>
 </nav>
 
 <script is:inline>
+  // Samma skript som tidigare för att hantera öppna/stänga
   const menuBtn = document.querySelector('[data-menu-toggle]');
   const menu = document.querySelector('.nav-menu');
   const dropdownBtn = document.querySelector('[data-dropdown-toggle]');
   const dropdown = document.querySelector('.dropdown-menu');
   const navLinks = document.querySelectorAll('.nav-link');
 
-  // Toggle mobile menu
   menuBtn?.addEventListener('click', () => {
     menu.classList.toggle('hidden');
   });
 
-  // Close menu when clicking any link
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       menu.classList.add('hidden');
@@ -94,15 +85,13 @@
     });
   });
 
-  // Toggle dropdown
   dropdownBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
     dropdown.classList.toggle('hidden');
   });
 
-  // Close everything when clicking outside
   document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+    if (menu && !menu.contains(e.target) && !menuBtn.contains(e.target)) {
       menu.classList.add('hidden');
       dropdown?.classList.add('hidden');
     }
