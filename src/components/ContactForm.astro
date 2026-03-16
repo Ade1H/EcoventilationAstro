@@ -1,12 +1,12 @@
 ---
-// ContactForm.astro
+/* ContactForm.astro */
 ---
+
 <div class="bg-white p-8 rounded-xl shadow-lg border border-[#ECF0F1]">
   <h2 class="text-2xl font-bold text-[#2C3E50] mb-6 pb-3 border-b border-gray-300">
     Skicka meddelande
   </h2>
 
-  
   <form id="contact-form" class="space-y-5">
     <div>
       <label class="block text-gray-700 font-medium mb-1">Namn *</label>
@@ -65,43 +65,68 @@
         rows="5"
         required
         class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
-        placeholder="Beskriv ditt behov, adress, önskat datum..."
+        placeholder="Beskriv ditt behov..."
       ></textarea>
     </div>
 
- <div class="mt-4">
-  <label for="imageUpload" 
-    class="inline-flex items-center gap-2 bg-[#2C3E50] text-white px-5 py-3 rounded-lg cursor-pointer hover:bg-[#1f2f3a] transition transform hover:-translate-y-1"
-  >
-    ➕ <span>Bifoga bild (valfritt)</span>
-  </label>
+    <!-- Bild -->
+    <div class="mt-4">
+      <label
+        for="imageUpload"
+        class="inline-flex items-center gap-2 bg-[#2C3E50] text-white px-5 py-3 rounded-lg cursor-pointer hover:bg-[#1f2f3a] transition"
+      >
+        ➕ <span>Bifoga bild (valfritt)</span>
+      </label>
 
-  <input
-    id="imageUpload"
-    type="file"
-    name="image"
-    accept="image/*"
-    class="hidden"
-  />
-</div>
+      <input
+        id="imageUpload"
+        type="file"
+        name="image"
+        accept="image/*"
+        class="hidden"
+      />
+    </div>
 
-    <div class="g-recaptcha" data-sitekey="6LeK-HQsAAAAAEm4pQTNIb0Z38s2NjZuOZciZF6v"></div>
+    <!-- ✅ RECAPTCHA -->
+    <div class="g-recaptcha"
+         data-sitekey="6LeK-HQsAAAAAEm4pQTNIb0Z38s2NjZuOZciZF6v">
+    </div>
 
+    <!-- Submit -->
     <button
       type="submit"
       id="contact-submit"
       class="w-full py-4 bg-[#2C3E50] text-white font-bold rounded-lg hover:bg-[#1f2f3a] transition disabled:opacity-50 flex justify-center items-center gap-2"
     >
       <span id="contact-btn-text">Skicka meddelande</span>
-      <svg id="contact-spinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      <svg
+        id="contact-spinner"
+        class="animate-spin h-5 w-5 text-white hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        ></circle>
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        ></path>
       </svg>
-    </button> 
+    </button>
   </form>
 
   <p id="contact-status" class="mt-4 text-center font-medium hidden"></p>
 </div>
+
+<!-- ✅ SCRIPT -->
 <script is:inline>
   const form = document.getElementById("contact-form");
   const submitBtn = document.getElementById("contact-submit");
@@ -119,6 +144,21 @@
 
     const formData = new FormData(form);
 
+    // ✅ Hämta captcha token
+    const token = grecaptcha.getResponse();
+
+    console.log("Captcha token:", token);
+
+    if (!token) {
+      alert("Verifiera reCAPTCHA först.");
+      submitBtn.disabled = false;
+      btnText.textContent = "Skicka meddelande";
+      spinner.classList.add("hidden");
+      return;
+    }
+
+    formData.append("g-recaptcha-response", token);
+
     try {
       const response = await fetch("/api/uploadCvVideoFourm.php", {
         method: "POST",
@@ -128,17 +168,22 @@
       const data = await response.json();
 
       if (data.status === "success") {
-        statusMsg.textContent = "✅ Tack! Vi återkommer inom 24 timmar.";
-        statusMsg.classList.remove("hidden");
+        statusMsg.textContent =
+          "✅ Tack! Vi återkommer inom 24 timmar.";
+        statusMsg.classList.remove("hidden", "text-red-800");
         statusMsg.classList.add("text-green-800");
-        form.reset();
-      } else {
-        throw new Error(data.message);
-      }
 
+        form.reset();
+        grecaptcha.reset(); // ✅ reset captcha
+      } else {
+        throw new Error(data.message || "Captcha error");
+      }
     } catch (err) {
       console.error(err);
-      statusMsg.textContent = "❌ Något gick fel. Försök igen senare.";
+
+      statusMsg.textContent =
+        "❌ Något gick fel. Försök igen senare.";
+
       statusMsg.classList.remove("hidden");
       statusMsg.classList.add("text-red-800");
     }
@@ -149,5 +194,5 @@
   });
 </script>
 
+<!-- ✅ Google Script (viktigt) -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-

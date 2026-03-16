@@ -1,15 +1,28 @@
 <section class="relative w-full overflow-hidden">
-  <video
-    id="contact-video"
+
+  <!-- LCP BILD (synlig direkt) -->
+  <img
+    src="/images/ventilation.webp"
+    alt="Ventilationsservice i Sverige"
+    width="1200"
+    height="800"
+    fetchpriority="high"
     class="w-full h-[40vh] md:h-[50vh] object-cover"
+  />
+
+  <!-- VIDEO laddas ovanpå -->
+  <video
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
     loop
     muted
     playsinline
-    preload="metadata"
+    preload="none"
+    poster="/images/ventilation.webp"
   >
     <source src="/videos/anvlppF.mp4" type="video/mp4" />
-    Din webbläsare stöder inte video-taggen.
   </video>
+
 </section>
 
 <script is:client>

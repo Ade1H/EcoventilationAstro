@@ -37,7 +37,7 @@ description: "Service och underhåll av FTX-ventilation för optimal värmeåter
 
   {slides.map((slide, idx) => (
     <div class="absolute inset-0 transition-opacity duration-700 rounded-2xl md:rounded-3xl overflow-hidden" data-slide={idx}>
-      <img src={slide.image} alt={slide.title} class="object-cover w-full h-full" />
+      <img src={slide.image} loading="lazy" alt={slide.title} class="object-cover w-full h-full" />
       <div class="absolute inset-0 bg-black/25 z-10" />
       <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 text-center">
         <h1 class="mb-6 text-4xl font-bold text-white drop-shadow-lg md:text-5xl lg:text-6xl">{slide.title}</h1>
