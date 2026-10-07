@@ -21,7 +21,7 @@ const Map = ({
   markerText = "Ecoventilation - Gävle",
 }) => {
   return (
-    <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
+    <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden shadow-lg relative z-0">
       <MapContainer
         center={[lat, lng]}
         zoom={zoom}

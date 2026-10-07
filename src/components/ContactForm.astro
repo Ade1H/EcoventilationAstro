@@ -7,45 +7,59 @@
     Skicka meddelande
   </h2>
 
-  <form id="contact-form" class="space-y-5">
-    <div>
-      <label class="block text-gray-700 font-medium mb-1">Namn *</label>
+  <form id="contact-form" autocomplete="off" class="space-y-5">
+    
+    <!-- NAMN MED DROPDOWN -->
+    <div class="relative" id="name-container">
+      <label for="name" class="block text-gray-700 font-medium mb-1">Namn *</label>
       <input
+        id="name"
         type="text"
         name="name"
         required
-        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none text-black bg-white"
         placeholder="För- och efternamn"
       />
+      <!-- Dropdown för sparade profiler -->
+      <ul
+        id="profile-dropdown"
+        class="hidden absolute left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg z-50 max-h-48 overflow-y-auto list-none p-0 m-0"
+      ></ul>
     </div>
 
+    <!-- E-POST -->
     <div>
-      <label class="block text-gray-700 font-medium mb-1">E-post *</label>
+      <label for="email" class="block text-gray-700 font-medium mb-1">E-post *</label>
       <input
+        id="email"
         type="email"
         name="email"
         required
-        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none text-black bg-white"
         placeholder="namn@foretag.se"
       />
     </div>
 
+    <!-- TELEFON -->
     <div>
-      <label class="block text-gray-700 font-medium mb-1">Telefon</label>
+      <label for="phone" class="block text-gray-700 font-medium mb-1">Telefon</label>
       <input
+        id="phone"
         type="tel"
         name="phone"
-        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none text-black bg-white"
         placeholder="070 123 45 67"
       />
     </div>
 
+    <!-- TJÄNST -->
     <div>
-      <label class="block text-gray-700 font-medium mb-1">Tjänst *</label>
+      <label for="service" class="block text-gray-700 font-medium mb-1">Tjänst *</label>
       <select
+        id="service"
         name="service"
         required
-        class="w-full px-4 py-3 border rounded-lg bg-white focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white text-black focus:ring-2 focus:ring-teal-500 focus:outline-none"
       >
         <option value="">Välj tjänst</option>
         <option>Rensning imkanal</option>
@@ -58,24 +72,26 @@
       </select>
     </div>
 
+    <!-- MEDDELANDE -->
     <div>
-      <label class="block text-gray-700 font-medium mb-1">Meddelande *</label>
+      <label for="message" class="block text-gray-700 font-medium mb-1">Meddelande *</label>
       <textarea
+        id="message"
         name="message"
         rows="5"
         required
-        class="w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none"
+        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:outline-none text-black bg-white"
         placeholder="Beskriv ditt behov..."
       ></textarea>
     </div>
 
-    <!-- Bild -->
+    <!-- BILD -->
     <div class="mt-4">
       <label
         for="imageUpload"
         class="inline-flex items-center gap-2 bg-[#2C3E50] text-white px-5 py-3 rounded-lg cursor-pointer hover:bg-[#1f2f3a] transition"
       >
-        ➕ <span>Bifoga bild (valfritt)</span>
+        ➕ <span id="file-label-text">Bifoga bild (valfritt)</span>
       </label>
 
       <input
@@ -87,12 +103,10 @@
       />
     </div>
 
-    <!-- ✅ RECAPTCHA -->
-    <div class="g-recaptcha"
-         data-sitekey="6LeK-HQsAAAAAEm4pQTNIb0Z38s2NjZuOZciZF6v">
-    </div>
+    <!-- RECAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6Lf-CeQtAAAAAJ29cdnVwJ_3ph_cxcIhD0e7qlUO"></div>
 
-    <!-- Submit -->
+    <!-- SUBMIT -->
     <button
       type="submit"
       id="contact-submit"
@@ -106,19 +120,8 @@
         fill="none"
         viewBox="0 0 24 24"
       >
-        <circle
-          class="opacity-25"
-          cx="12"
-          cy="12"
-          r="10"
-          stroke="currentColor"
-          stroke-width="4"
-        ></circle>
-        <path
-          class="opacity-75"
-          fill="currentColor"
-          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-        ></path>
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
     </button>
   </form>
@@ -126,73 +129,171 @@
   <p id="contact-status" class="mt-4 text-center font-medium hidden"></p>
 </div>
 
-<!-- ✅ SCRIPT -->
+<!-- ✅ SKRIPT MED SÄKERT SCOPE -->
 <script is:inline>
+(function() {
   const form = document.getElementById("contact-form");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
+  const profileDropdown = document.getElementById("profile-dropdown");
+  const nameContainer = document.getElementById("name-container");
+
   const submitBtn = document.getElementById("contact-submit");
   const btnText = document.getElementById("contact-btn-text");
   const spinner = document.getElementById("contact-spinner");
   const statusMsg = document.getElementById("contact-status");
+  const imageInput = document.getElementById("imageUpload");
+  const fileLabelText = document.getElementById("file-label-text");
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  const STORAGE_KEY = "varomax_saved_profiles";
 
-    submitBtn.disabled = true;
-    btnText.textContent = "Skickar...";
-    spinner.classList.remove("hidden");
-    statusMsg.classList.add("hidden");
+  function getProfiles() {
+    try {
+      const data = localStorage.getItem(STORAGE_KEY);
+      return data ? JSON.parse(data) : [];
+    } catch (e) {
+      return [];
+    }
+  }
 
-    const formData = new FormData(form);
+  function saveProfile(profile) {
+    try {
+      const profiles = getProfiles();
+      const filtered = profiles.filter(
+        (p) => p.name.trim().toLowerCase() !== profile.name.trim().toLowerCase()
+      );
+      const updated = [profile, ...filtered];
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+    } catch (e) {
+      console.error("Kunde inte spara profil:", e);
+    }
+  }
 
-    // ✅ Hämta captcha token
-    const token = grecaptcha.getResponse();
+  function renderDropdown(filterText = "") {
+    if (!profileDropdown) return;
+    
+    const profiles = getProfiles();
+    const filtered = profiles.filter((p) =>
+      p.name.toLowerCase().includes(filterText.toLowerCase())
+    );
 
-    console.log("Captcha token:", token);
+    profileDropdown.innerHTML = "";
 
-    if (!token) {
-      alert("Verifiera reCAPTCHA först.");
-      submitBtn.disabled = false;
-      btnText.textContent = "Skicka meddelande";
-      spinner.classList.add("hidden");
+    if (filtered.length === 0) {
+      profileDropdown.classList.add("hidden");
       return;
     }
 
-    formData.append("g-recaptcha-response", token);
+    filtered.forEach((p) => {
+      const li = document.createElement("li");
+      li.className = "px-4 py-3 hover:bg-gray-100 cursor-pointer border-b border-gray-100 last:border-0";
+      li.innerHTML = `
+        <div class="font-semibold text-gray-800 text-sm">${p.name}</div>
+        <div class="text-xs text-gray-500">${p.email} ${p.phone ? "• " + p.phone : ""}</div>
+      `;
 
-    try {
-      const response = await fetch("/api/uploadCvVideoFourm.php", {
-        method: "POST",
-        body: formData
+      li.addEventListener("mousedown", (e) => {
+        e.preventDefault();
+        if (nameInput) nameInput.value = p.name || "";
+        if (emailInput) emailInput.value = p.email || "";
+        if (phoneInput) phoneInput.value = p.phone || "";
+        profileDropdown.classList.add("hidden");
       });
 
-      const data = await response.json();
+      profileDropdown.appendChild(li);
+    });
 
-      if (data.status === "success") {
-        statusMsg.textContent =
-          "✅ Tack! Vi återkommer inom 24 timmar.";
-        statusMsg.classList.remove("hidden", "text-red-800");
-        statusMsg.classList.add("text-green-800");
+    profileDropdown.classList.remove("hidden");
+  }
 
-        form.reset();
-        grecaptcha.reset(); // ✅ reset captcha
-      } else {
-        throw new Error(data.message || "Captcha error");
-      }
-    } catch (err) {
-      console.error(err);
+  if (nameInput) {
+    nameInput.addEventListener("focus", () => renderDropdown(nameInput.value));
+    nameInput.addEventListener("input", () => renderDropdown(nameInput.value));
+  }
 
-      statusMsg.textContent =
-        "❌ Något gick fel. Försök igen senare.";
-
-      statusMsg.classList.remove("hidden");
-      statusMsg.classList.add("text-red-800");
+  document.addEventListener("click", (e) => {
+    if (nameContainer && !nameContainer.contains(e.target) && profileDropdown) {
+      profileDropdown.classList.add("hidden");
     }
-
-    submitBtn.disabled = false;
-    btnText.textContent = "Skicka meddelande";
-    spinner.classList.add("hidden");
   });
+
+  if (imageInput && fileLabelText) {
+    imageInput.addEventListener("change", function (e) {
+      if (e.target.files && e.target.files[0]) {
+        fileLabelText.textContent = e.target.files[0].name;
+      } else {
+        fileLabelText.textContent = "Bifoga bild (valfritt)";
+      }
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      if (nameInput && emailInput && nameInput.value.trim() && emailInput.value.trim()) {
+        saveProfile({
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          phone: phoneInput ? phoneInput.value.trim() : "",
+        });
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = "Skickar...";
+      if (spinner) spinner.classList.remove("hidden");
+      if (statusMsg) statusMsg.classList.add("hidden");
+
+      const formData = new FormData(form);
+      const token = typeof grecaptcha !== "undefined" ? grecaptcha.getResponse() : "";
+
+      if (!token) {
+        alert("Verifiera reCAPTCHA först.");
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = "Skicka meddelande";
+        if (spinner) spinner.classList.add("hidden");
+        return;
+      }
+
+      formData.append("g-recaptcha-response", token);
+
+      try {
+        const response = await fetch("/api/Form.php", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.status === "success") {
+          if (statusMsg) {
+            statusMsg.textContent = "✅ Tack! Vi återkommer inom 24 timmar.";
+            statusMsg.classList.remove("hidden", "text-red-800");
+            statusMsg.classList.add("text-green-800");
+          }
+
+          form.reset();
+          if (fileLabelText) fileLabelText.textContent = "Bifoga bild (valfritt)";
+          if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+        } else {
+          throw new Error(data.message || "Ett fel uppstod");
+        }
+      } catch (err) {
+        console.error(err);
+        if (statusMsg) {
+          statusMsg.textContent = "❌ Något gick fel. Försök igen senare.";
+          statusMsg.classList.remove("hidden");
+          statusMsg.classList.add("text-red-800");
+        }
+      }
+
+      if (submitBtn) submitBtn.disabled = false;
+      if (btnText) btnText.textContent = "Skicka meddelande";
+      if (spinner) spinner.classList.add("hidden");
+    });
+  }
+})();
 </script>
 
-<!-- ✅ Google Script (viktigt) -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
