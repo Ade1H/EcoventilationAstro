@@ -1,0 +1,73 @@
+<!-- public/test.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testa API</title>
+</head>
+<body>
+  <h2>🔍 API-test med detaljerad felsökning</h2>
+  
+  <div style="margin-bottom: 20px;">
+    <button onclick="testApi()" style="padding: 10px; background: green; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      Testa API
+    </button>
+  </div>
+  
+  <div style="margin-bottom: 20px; background: #e6f3ff; padding: 10px; border-radius: 5px;">
+    <h3>📤 Request som skickas:</h3>
+    <pre id="request" style="background: white; padding: 10px;">Väntar...</pre>
+  </div>
+  
+  <div style="background: #f0f0f0; padding: 10px; border-radius: 5px;">
+    <h3>📥 Svar från server:</h3>
+    <pre id="result" style="background: white; padding: 10px; min-height: 100px;">Klicka på knappen</pre>
+  </div>
+
+  <script>
+    async function testApi() {
+      const requestData = {
+        message: "Hej, vad gör ni?"
+      };
+      
+      document.getElementById('request').innerText = JSON.stringify(requestData, null, 2);
+      document.getElementById('result').innerText = '🔄 Skickar...';
+      
+      try {
+        console.log('🔵 Skickar fetch till /api/chat');
+        console.log('Request data:', requestData);
+        
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(requestData)
+        });
+        
+        console.log('🟡 Response status:', response.status);
+        console.log('Response headers:', response.headers);
+        
+        // Försök läsa response som text först
+        const responseText = await response.text();
+        console.log('🟢 Response text:', responseText);
+        
+        let displayText = `Status: ${response.status}\n\n`;
+        
+        try {
+          // Försök visa som JSON om möjligt
+          const json = JSON.parse(responseText);
+          displayText += JSON.stringify(json, null, 2);
+        } catch {
+          displayText += responseText;
+        }
+        
+        document.getElementById('result').innerText = displayText;
+        
+      } catch (error) {
+        console.error('❌ Fetch error:', error);
+        document.getElementById('result').innerText = 'Fel: ' + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

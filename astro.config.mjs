@@ -5,7 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: "https://www.ecoventilation.se",
-  output: "static",   // 👈 VERY IMPORTANT
+  output: "static",
+  outDir: "./docs",    
 
   integrations: [
     react(),

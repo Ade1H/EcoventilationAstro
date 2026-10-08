@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="sv"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ventilationsservice i Vänersborg | Ecoventilation</title><meta name="description" content="Vi erbjuder kanalrensning, FTX service och ventilationsservice i Vänersborg."><link rel="canonical" href="https://www.ecoventilation.se/ventilation/vanersborg/"><meta property="og:type" content="website"><meta property="og:title" content="Ventilationsservice i Vänersborg | Ecoventilation"><meta property="og:description" content="Vi erbjuder kanalrensning, FTX service och ventilationsservice i Vänersborg."><meta property="og:url" content="https://www.ecoventilation.se/ventilation/vanersborg/"><meta property="og:image" content="https://www.ecoventilation.se/images/og-image.png"><meta property="og:site_name" content="Ecoventilation"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ventilationsservice i Vänersborg | Ecoventilation"><meta name="twitter:description" content="Vi erbjuder kanalrensning, FTX service och ventilationsservice i Vänersborg."><meta name="twitter:image" content="https://www.ecoventilation.se/images/og-image.png"><link rel="icon" href="/favicon.webp" type="image/png"><link rel="apple-touch-icon" href="/favicon.webp"><link rel="sitemap" type="application/xml" title="Sitemap" href="https://www.ecoventilation.se/sitemap-index.xml"><script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Ecoventilation","url":"https://www.ecoventilation.se","logo":"https://www.ecoventilation.se/favicon.webp","image":"https://www.ecoventilation.se/images/og-image.png","description":"Vi erbjuder kanalrensning, FTX service och ventilationsservice i Vänersborg.","areaServed":{"@type":"Country","name":"Sweden"},"address":{"@type":"PostalAddress","addressCountry":"SE"},"sameAs":["https://www.facebook.com/profile.php?id=61586090752435","https://www.instagram.com/ecoventilation/"]}</script><link rel="stylesheet" href="/_astro/about.AJfBbSXQ.css"></head> <body class="min-h-screen flex flex-col"> <nav class="bg-white sticky top-0 z-[100] shadow-md border-b border-gray-200"> <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between"> <a href="/" class="flex items-center gap-3"> <img src="/images/logo.webp" alt="Ecoventilation Logo" width="50" height="50" class="rounded-lg"> <div class="flex flex-col"> <span class="text-lg font-bold text-gray-900">
+Ecoventilation
+</span> <span class="text-xs text-gray-500 hidden sm:block">
+Ventilation och avloppsservice
+</span> </div> </a> <button class="md:hidden flex flex-col gap-1.5" aria-label="Menu" data-menu-toggle> <span class="h-0.5 w-6 bg-gray-900"> <span class="h-0.5 w-6 bg-gray-900"></span> <span class="h-0.5 w-6 bg-gray-900"></span> </span></button> <ul class="nav-menu absolute md:static top-full left-0 w-full md:w-auto
+      bg-white md:bg-transparent
+      hidden md:flex flex-col md:flex-row
+      md:items-center gap-6 p-6 md:p-0 border-t md:border-none border-gray-100"> <li><a href="/" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Hem</a></li> <li class="relative"> <button class="text-gray-800 hover:text-blue-600 transition flex items-center gap-1 font-medium" data-dropdown-toggle>
+Tjänster ▼
+</button> <ul class="dropdown-menu hidden md:absolute md:left-0 md:mt-2
+          bg-white border border-gray-200 rounded-lg w-full md:w-64 py-2 shadow-xl"> <li><a href="/rensning-imkanal" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Imkanal</a></li> <li><a href="/ftx-varmevaxlare" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">FTX / Värmeväxlare</a></li> <li><a href="/avloppsrensning-spolning" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Avloppsrensning</a></li> <li><a href="/rensning-franluft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Frånluft</a></li> <li><a href="/rensning-tilluft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Tilluft</a></li> <li><a href="/rensning-luft-luft" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Rensning Luft-Luft</a></li> <li><a href="/service-omraden" class="nav-link block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded">Serviceområden</a></li> </ul> </li> <li><a href="/contact" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Kontakt</a></li> <li><a href="/about" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Om</a></li> <li><a href="/blogg" class="nav-link text-gray-800 hover:text-blue-600 transition font-medium">Blogg</a></li> </ul> </div> </nav> <script>
+  // Samma skript som tidigare för att hantera öppna/stänga
+  const menuBtn = document.querySelector('[data-menu-toggle]');
+  const menu = document.querySelector('.nav-menu');
+  const dropdownBtn = document.querySelector('[data-dropdown-toggle]');
+  const dropdown = document.querySelector('.dropdown-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  menuBtn?.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      dropdown?.classList.add('hidden');
+    });
+  });
+
+  dropdownBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (menu && !menu.contains(e.target) && !menuBtn.contains(e.target)) {
+      menu.classList.add('hidden');
+      dropdown?.classList.add('hidden');
+    }
+  });
+</script> <main class="flex-1">  <main class="max-w-5xl mx-auto px-6 py-20"> <!-- 🔥 HERO --> <section class="mb-12"> <h1 class="text-4xl font-bold mb-6">
+Ventilationsservice i Vänersborg </h1> <p class="text-lg text-gray-600 max-w-3xl">
+Vi är en certifierad ventilationsfirma som erbjuder
+      kanalrensning, imkanal rengöring, FTX service,
+      luftflödesmätning och injustering ventilation i Vänersborg.
+</p> </section> <!-- 🔥 SERVICES --> <section class="mb-12"> <h2 class="text-2xl font-semibold mb-4">
+Våra Tjänster
+</h2> <li class="mb-4"> <strong>Tilluft & Frånluft – Installation, rengöring och optimering</strong> <p class="text-sm text-gray-600">
+Vi installerar, justerar och optimerar tilluft och frånluft för bättre luftflöde och inomhusklimat i Vänersborg.
+</p> </li> <li class="mb-4"> <strong>Avloppsspolning – Rensning av avloppssystem</strong> <p class="text-sm text-gray-600">
+Effektiv spolning och rengöring av avloppsledningar för att undvika stopp och problem.
+</p> </li> <li class="mb-4"> <strong>Rengöring & Rensning av ventilationskanaler</strong> <p class="text-sm text-gray-600">
+Vi avlägsnar damm, smuts och partiklar för bättre luftkvalitet och ökad brandsäkerhet.
+</p> </li> <li class="mb-4"> <strong>Rengöring & Rensning av avloppskanaler</strong> <p class="text-sm text-gray-600">
+Professionell rengöring av avloppskanaler för att förhindra stopp och dålig lukt.
+</p> </li> <li class="mb-4"> <strong>Imkanal – Rengöring & Brandsäker Kontroll</strong> <p class="text-sm text-gray-600">
+Vi rengör och kontrollerar imkanaler för att minska brandrisk och förbättra ventilationen.
+</p> </li> <li class="mb-4"> <strong>Kanalfläkt & Takfläkt – Service och Reparation</strong> <p class="text-sm text-gray-600">
+Service, felsökning och underhåll av fläktar för stabil och energieffektiv ventilation.
+</p> </li> <li class="mb-4"> <strong>Ventilationsservice & Underhåll</strong> <p class="text-sm text-gray-600">
+Regelbunden service som förbättrar luftflöde, minskar energiförbrukning och ökar livslängden på systemet.
+</p> </li> <li class="mb-4"> <strong>Köksfläkt – Installation, Service & Rengöring</strong> <p class="text-sm text-gray-600">
+Installation och rengöring av köksfläkt för effektiv bortledning av matos och fett.
+</p> </li> <li class="mb-4"> <strong>Värmeväxlare – Service & Rengöring</strong> <p class="text-sm text-gray-600">
+Rengöring och service av värmeväxlare för bättre energieffektivitet och inomhusklimat.
+</p> </li> <li class="mb-4"> <strong>Vattenlås – Rensning & Underhåll</strong> <p class="text-sm text-gray-600">
+Vi rensar och underhåller vattenlås för att förhindra stopp och dålig lukt.
+</p> </li> <li class="mb-4"> <strong>Luft-luft Värmepump – Installation & Service</strong> <p class="text-sm text-gray-600">
+Installation, service och optimering av luft-luft värmepumpar för effektiv uppvärmning.
+</p> </li> <li class="mb-4"> <strong>AC Service – Rengöring, Felsökning & Reparation</strong> <p class="text-sm text-gray-600">
+Professionell service och rengöring av AC-system för bättre prestanda och hållbarhet.
+</p> </li> <li class="mb-4"> <strong>Luftvärmepump – Installation & Optimering</strong> <p class="text-sm text-gray-600">
+Vi installerar och optimerar luftvärmepumpar för energieffektiv drift.
+</p> </li> <li class="mb-4"> <strong>FTX System – Service, Filterbyte & Rengöring</strong> <p class="text-sm text-gray-600">
+Service av FTX-system inklusive rengöring och filterbyte för bättre ventilation.
+</p> </li> <li class="mb-4"> <strong>Luftflödesmätning & Ventilationskontroll</strong> <p class="text-sm text-gray-600">
+Mätning och kontroll av luftflöden för att säkerställa korrekt ventilation och balans.
+</p> </li> <li class="mb-4"> <strong>Injustering av Ventilation – Optimering av Luftbalans</strong> <p class="text-sm text-gray-600">
+Vi justerar ventilationssystemet så att luftflödet blir korrekt och energieffektivt.
+</p> </li> </section> <!-- 🔥 CTA --> <section class="bg-gray-100 p-8 rounded-xl text-center"> <h2 class="text-2xl font-bold mb-4">
+Boka Service i Vänersborg </h2> <p class="mb-6 text-gray-600">
+Kontakta oss idag för offert och bokning.
+</p> <a href="/contact" class="bg-black text-white px-6 py-3 rounded-lg hover:opacity-80 transition">
+Kontakta oss
+</a> </section> </main>  </main> <footer class="w-full bg-white text-gray-600 font-sans border-t border-gray-100"> <div class="max-w-7xl mx-auto px-4 py-6 md:py-8"> <div class="w-full bg-gray-50 border border-gray-100 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 transition-all hover:bg-gray-100/50"> <img src="/images/lansforsakringar-logo.png" alt="Länsförsäkringar" class="h-10 w-auto opacity-90"> <div class="h-10 w-px bg-gray-200 hidden sm:block"></div> <span class="text-xl md:text-2xl font-medium tracking-tight text-gray-700 text-center">
+Tryggt försäkrade genom <span class="text-gray-900 font-bold">Länsförsäkringar</span> </span> </div> <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 text-sm"> <div class="col-span-2 md:col-span-1 space-y-2"> <h3 class="text-lg font-bold text-gray-900">Eco<span class="text-blue-600">Ventilation</span></h3> <p class="text-xs leading-relaxed max-w-xs">Professionell Ventilation och avloppsservice för ett hälsosammare inomhus.</p> <p class="text-[10px] text-gray-400 uppercase tracking-wider">Ecoview Solution AB • 559143-3957</p> </div> <div class="space-y-2"> <h4 class="text-[11px] font-black uppercase tracking-widest text-gray-900">Navigation</h4> <ul class="space-y-1.5 text-gray-500"> <li><a href="/about" class="hover:text-blue-600 transition-colors">Om Oss</a></li> <li><a href="/contact" class="hover:text-blue-600 transition-colors">Boka Service</a></li> <li><a href="/privacy" class="hover:text-blue-600 text-[10px] transition-colors">Integritetspolicy</a></li> </ul> </div> <div class="space-y-2"> <h4 class="text-[11px] font-black uppercase tracking-widest text-gray-900">Kontakt</h4> <ul class="space-y-1.5 text-gray-500"> <li> <a href="tel:+4620104544" class="hover:text-blue-600 transition-colors">
+020-10 45 44
+</a> </li> <li> <a href="mailto:kundservice@ecoventilation.se" class="hover:text-blue-600 transition-colors">
+E-post
+</a> </li> <li> <a href="https://www.google.com/maps/search/?api=1&query=Petregatan+1,+802+50+Gävle" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
+Petregatan 1, Gävle
+</a> </li> </ul> </div> <div class="space-y-2"> <h4 class="text-[11px] font-black uppercase tracking-widest text-gray-900">Öppettider</h4> <div class="text-xs space-y-1.5 bg-gray-50 p-3 rounded-xl border border-gray-100"> <div class="flex justify-between items-center border-b border-gray-200/50 pb-1"> <span class="text-gray-500">Mån – Fre</span> <span class="font-bold text-gray-900">10:00 – 14:00</span> </div> <div class="flex justify-between items-center text-gray-400 text-[11px]"> <span>Lör – Sön</span> <span>Stängt</span> </div> </div> </div> </div> </div> </footer> <noscript>
+Powered by <a href="https://www.smartsupp.com" target="_blank" rel="noopener">Smartsupp</a> </noscript> </body></html>
